@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class HTML_TreeMenuSafe</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class HTML_TreeMenuSafe</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">HTML_TreeMenu Class</p>
+<p class="description"><p>A simple couple of PHP classes and some not so simple  Jabbascript which produces a tree menu. In IE this menu  is dynamic, with branches being collapsable. In IE5+ the  status of the collapsed/open branches persists across page  refreshes.In any other browser the tree is static. Code is  based on work of Harald Radi.</p><p>Usage.</p><p>After installing the package, copy the example php script to  your servers document root. Also place the TreeMenu.js and the  images folder in the same place. Running the script should  then produce the tree.</p><p>Thanks go to Chip Chapin (http://www.chipchapin.com) for many  excellent ideas and improvements.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Richard Heyes &lt;<a href="mailto:richard@php.net">richard@php.net</a>&gt;</li>
+				<li><span class="field">author:</span> Harald Radi &lt;<a href="mailto:harald.radi@nme.at">harald.radi@nme.at</a>&gt;</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_addons---treemenu---Attic---TreeMenuSafe.php,v.html">/addons/treemenu/Attic/TreeMenuSafe.php,v</a> (line <span class="field"><a href="../__filesource/fsource_default__addonstreemenuAtticTreeMenuSafe.php,v.html#a13">13</a></span>)
+		</p>
+		
+				
+		<pre><a href="../HTML_TreeMenu/HTML_TreeMenu.html">HTML_TreeMenu</a>
+   |
+   --HTML_TreeMenuSafe</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$tmsDoesMenus" title="details" class="var-name">$tmsDoesMenus</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																				
+												<div class="method-definition">
+											<span class="method-result">HTML_TreeMenuSafe</span>
+										<a href="#HTML_TreeMenuSafe" title="details" class="method-name">HTML_TreeMenuSafe</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$layer</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$images</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$linkTarget</span> = <span class="var-default">'_self'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$usePersistence</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#printMenu" title="details" class="method-name">printMenu</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$images</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$rigidmenu</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$layer</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_printNode" title="details" class="method-name">_printNode</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$thisnode</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$currentlevel</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$prepend</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$modifier</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_printStaticMenu" title="details" class="method-name">_printStaticMenu</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$nodeParent</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$nodeinx</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$currentlevel</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$prepend</span> = <span class="var-default">''</span>])
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$tmsDoesMenus" id="$tmsDoesMenus"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$tmsDoesMenus</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_default__addonstreemenuAtticTreeMenuSafe.php,v.html#a15">15</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../HTML_TreeMenu/HTML_TreeMenu.html">HTML_TreeMenu</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../HTML_TreeMenu/HTML_TreeMenu.html#var$defaultClass">HTML_TreeMenu::$defaultClass</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HTML_TreeMenu/HTML_TreeMenu.html#var$images">HTML_TreeMenu::$images</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HTML_TreeMenu/HTML_TreeMenu.html#var$items">HTML_TreeMenu::$items</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HTML_TreeMenu/HTML_TreeMenu.html#var$linkTarget">HTML_TreeMenu::$linkTarget</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../HTML_TreeMenu/HTML_TreeMenu.html#var$usePersistence">HTML_TreeMenu::$usePersistence</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodHTML_TreeMenuSafe" id="HTML_TreeMenuSafe"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor HTML_TreeMenuSafe</span> (line <span class="line-number"><a href="../__filesource/fsource_default__addonstreemenuAtticTreeMenuSafe.php,v.html#a17">17</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">HTML_TreeMenuSafe</span>
+		<span class="method-name">
+			HTML_TreeMenuSafe
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$layer</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$images</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$linkTarget</span> = <span class="var-default">'_self'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$usePersistence</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$layer</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$images</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$linkTarget</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$usePersistence</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodprintMenu" id="printMenu"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">printMenu</span> (line <span class="line-number"><a href="../__filesource/fsource_default__addonstreemenuAtticTreeMenuSafe.php,v.html#a27">27</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			printMenu
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$images</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$rigidmenu</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$layer</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$images</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$rigidmenu</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$layer</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_printNode" id="_printNode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_printNode</span> (line <span class="line-number"><a href="../__filesource/fsource_default__addonstreemenuAtticTreeMenuSafe.php,v.html#a49">49</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_printNode
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$thisnode</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$currentlevel</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$prepend</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$modifier</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$thisnode</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$currentlevel</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$prepend</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$modifier</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_printStaticMenu" id="_printStaticMenu"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_printStaticMenu</span> (line <span class="line-number"><a href="../__filesource/fsource_default__addonstreemenuAtticTreeMenuSafe.php,v.html#a103">103</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_printStaticMenu
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$nodeParent</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$nodeinx</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$currentlevel</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$prepend</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$nodeParent</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$nodeinx</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$currentlevel</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$prepend</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../HTML_TreeMenu/HTML_TreeMenu.html">HTML_TreeMenu</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../HTML_TreeMenu/HTML_TreeMenu.html#methodHTML_TreeMenu">HTML_TreeMenu::HTML_TreeMenu()</a></span><br>
+													<span class="method-name"><a href="../HTML_TreeMenu/HTML_TreeMenu.html#methodaddItem">HTML_TreeMenu::addItem()</a></span><br>
+													<span class="method-name"><a href="../HTML_TreeMenu/HTML_TreeMenu.html#methodsetOption">HTML_TreeMenu::setOption()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 25 Apr 2007 00:16:12 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</div></body>
+</html>

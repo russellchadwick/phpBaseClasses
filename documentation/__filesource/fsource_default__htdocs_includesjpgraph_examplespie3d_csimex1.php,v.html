@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for pie3d_csimex1.php,v</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file pie3d_csimex1.php,v</h1>
+<p>Documentation is available at <a href="../default/_htdocs_includes---jpgraph_examples---pie3d_csimex1.php,v.html">pie3d_csimex1.php,v</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-inc">include_once&nbsp;</span><span class="src-sym">(</span><span class="src-str">&quot;jpgraph.php&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-inc">include_once&nbsp;</span><span class="src-sym">(</span><span class="src-str">&quot;jpgraph_pie.php&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-inc">include_once&nbsp;</span><span class="src-sym">(</span><span class="src-str">&quot;jpgraph_pie3d.php&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a5"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-comm">//$gJpgBrandTiming=true;</span></div></li>
+<li><div class="src-line"><a name="a7"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-comm">//&nbsp;Some&nbsp;data</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-var">$data&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-num">40</span><span class="src-sym">,</span><span class="src-num">21</span><span class="src-sym">,</span><span class="src-num">17</span><span class="src-sym">,</span><span class="src-num">27</span><span class="src-sym">,</span><span class="src-num">23</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a10"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-comm">//&nbsp;Create&nbsp;the&nbsp;Pie&nbsp;Graph.&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-var">$graph&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../default/PieGraph.html">PieGraph</a></span><span class="src-sym">(</span><span class="src-num">400</span><span class="src-sym">,</span><span class="src-num">200</span><span class="src-sym">,</span><span class="src-str">'auto'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-var">$graph</span><span class="src-sym">-&gt;</span><span class="src-id">SetShadow</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a14"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-comm">//&nbsp;Set&nbsp;A&nbsp;title&nbsp;for&nbsp;the&nbsp;plot</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-var">$graph</span><span class="src-sym">-&gt;</span><span class="src-id">title</span><span class="src-sym">-&gt;</span><span class="src-id">Set</span><span class="src-sym">(</span><span class="src-str">&quot;3D&nbsp;Pie&nbsp;Client&nbsp;side&nbsp;image&nbsp;map&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-var">$graph</span><span class="src-sym">-&gt;</span><span class="src-id">title</span><span class="src-sym">-&gt;</span><span class="src-id">SetFont</span><span class="src-sym">(</span><span class="src-id"><a href="../default/_addons---jpgraph---jpgraph.php,v.html#defineFF_FONT1">FF_FONT1</a></span><span class="src-sym">,</span><span class="src-id"><a href="../default/_addons---jpgraph---jpgraph.php,v.html#defineFS_BOLD">FS_BOLD</a></span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-comm">//&nbsp;Create</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-var">$p1&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../default/PiePlot3D.html">PiePlot3D</a></span><span class="src-sym">(</span><span class="src-var">$data</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-var">$p1</span><span class="src-sym">-&gt;</span><span class="src-id">SetLegends</span><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">&quot;Jan&nbsp;(%d)&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;Feb&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;Mar&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;Apr&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;May&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;Jun&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;Jul&quot;</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-var">$targ</span>=<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">&quot;pie3d_csimex1.php?v=1&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;pie3d_csimex1.php?v=2&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;pie3d_csimex1.php?v=3&quot;</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a23"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;pie3d_csimex1.php?v=4&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;pie3d_csimex1.php?v=5&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;pie3d_csimex1.php?v=6&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-var">$alts</span>=<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">&quot;val=%d&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;val=%d&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;val=%d&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;val=%d&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;val=%d&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;val=%d&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-var">$p1</span><span class="src-sym">-&gt;</span><span class="src-id">SetCSIMTargets</span><span class="src-sym">(</span><span class="src-var">$targ</span><span class="src-sym">,</span><span class="src-var">$alts</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-comm">//&nbsp;Use&nbsp;absolute&nbsp;labels</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-var">$p1</span><span class="src-sym">-&gt;</span><span class="src-id">SetLabelType</span><span class="src-sym">(</span><span class="src-num">1</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-var">$p1</span><span class="src-sym">-&gt;</span><span class="src-id">value</span><span class="src-sym">-&gt;</span><span class="src-id">SetFormat</span><span class="src-sym">(</span><span class="src-str">&quot;%d&nbsp;kr&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-comm">//&nbsp;Move&nbsp;the&nbsp;pie&nbsp;slightly&nbsp;to&nbsp;the&nbsp;left</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-var">$p1</span><span class="src-sym">-&gt;</span><span class="src-id">SetCenter</span><span class="src-sym">(</span><span class="src-num">0.4</span><span class="src-sym">,</span><span class="src-num">0.5</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-var">$graph</span><span class="src-sym">-&gt;</span><span class="src-id">Add</span><span class="src-sym">(</span><span class="src-var">$p1</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-comm">//&nbsp;Send&nbsp;back&nbsp;the&nbsp;HTML&nbsp;page&nbsp;which&nbsp;will&nbsp;call&nbsp;this&nbsp;script&nbsp;again</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-comm">//&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;image.</span></div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-var">$graph</span><span class="src-sym">-&gt;</span><span class="src-id">StrokeCSIM</span><span class="src-sym">(</span><span class="src-str">'Examples/pie3d_csimex1.php'</span><span class="src-sym">,</span><span class="src-str">'pie3d_csimex1'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 25 Apr 2007 00:14:16 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for shared.make_timestamp.php,v</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file shared.make_timestamp.php,v</h1>
+<p>Documentation is available at <a href="../default/_addons---smarty---plugins---shared.make_timestamp.php,v.html">shared.make_timestamp.php,v</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-comm">/*======================================================================*\</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-comm">&nbsp;&nbsp;&nbsp;&nbsp;Function:&nbsp;smarty_make_timestamp</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-comm">&nbsp;&nbsp;&nbsp;&nbsp;Purpose:&nbsp;&nbsp;used&nbsp;by&nbsp;other&nbsp;smarty&nbsp;functions&nbsp;to&nbsp;make&nbsp;a&nbsp;timestamp</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-comm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;a&nbsp;string.</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-comm">\*======================================================================*/</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-key">function&nbsp;</span><a href="../default/_addons---smarty---plugins---shared.make_timestamp.php,v.html#functionsmarty_make_timestamp">smarty_make_timestamp</a><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a10"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if</span><span class="src-sym">(</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a11"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$string&nbsp;</span>=&nbsp;<span class="src-str">&quot;now&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a12"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a13"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$time&nbsp;</span>=&nbsp;<a href="http://www.php.net/strtotime">strtotime</a><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a14"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><a href="http://www.php.net/is_numeric">is_numeric</a><span class="src-sym">(</span><span class="src-var">$time</span><span class="src-sym">)&nbsp;</span>&amp;&amp;&nbsp;<span class="src-var">$time&nbsp;</span>!=&nbsp;-<span class="src-num">1</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a15"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$time</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a16"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a17"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;is&nbsp;mysql&nbsp;timestamp&nbsp;format&nbsp;of&nbsp;YYYYMMDDHHMMSS?</span></div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><a href="http://www.php.net/is_numeric">is_numeric</a><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">)&nbsp;</span>&amp;&amp;&nbsp;<a href="http://www.php.net/strlen">strlen</a><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">)&nbsp;</span>==&nbsp;<span class="src-num">14</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a19"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$time&nbsp;</span>=&nbsp;<a href="http://www.php.net/mktime">mktime</a><span class="src-sym">(</span><a href="http://www.php.net/substr">substr</a><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">,</span><span class="src-num">8</span><span class="src-sym">,</span><span class="src-num">2</span><span class="src-sym">)</span><span class="src-sym">,</span><a href="http://www.php.net/substr">substr</a><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">,</span><span class="src-num">10</span><span class="src-sym">,</span><span class="src-num">2</span><span class="src-sym">)</span><span class="src-sym">,</span><a href="http://www.php.net/substr">substr</a><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">,</span><span class="src-num">12</span><span class="src-sym">,</span><span class="src-num">2</span><span class="src-sym">)</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a20"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/substr">substr</a><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">,</span><span class="src-num">4</span><span class="src-sym">,</span><span class="src-num">2</span><span class="src-sym">)</span><span class="src-sym">,</span><a href="http://www.php.net/substr">substr</a><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">,</span><span class="src-num">6</span><span class="src-sym">,</span><span class="src-num">2</span><span class="src-sym">)</span><span class="src-sym">,</span><a href="http://www.php.net/substr">substr</a><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">,</span><span class="src-num">0</span><span class="src-sym">,</span><span class="src-num">4</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a21"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$time</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a23"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a25"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;couldn't&nbsp;recognize&nbsp;it,&nbsp;try&nbsp;to&nbsp;return&nbsp;a&nbsp;time</span></div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$time&nbsp;</span>=&nbsp;(int)&nbsp;<span class="src-var">$string</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$time&nbsp;</span>&gt;&nbsp;<span class="src-num">0</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$time</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">else</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/time">time</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-comm">/*&nbsp;vim:&nbsp;set&nbsp;expandtab:&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 25 Apr 2007 00:14:53 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</body>
+</html>

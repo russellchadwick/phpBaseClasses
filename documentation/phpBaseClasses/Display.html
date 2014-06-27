@@ -1,0 +1,1792 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Display</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Display</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Classes to assist in displaying data. This includes everything from  simple making text pretty to displaying complicated subselects.  See  security object admin tool for example of subselects.</p>
+		<p class="notes">
+			Located in <a class="field" href="_classDisplay.php.html">/classDisplay.php</a> (line <span class="field"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a46">46</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																																																																																																				
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#Display" title="details" class="method-name">Display</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#callJS" title="details" class="method-name">callJS</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$function</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$parameters</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#closeWindow" title="details" class="method-name">closeWindow</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#delim" title="details" class="method-name">delim</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$color</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#displayTF" title="details" class="method-name">displayTF</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#escapeJsString" title="details" class="method-name">escapeJsString</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#escapePostVar" title="details" class="method-name">escapePostVar</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#foot" title="details" class="method-name">foot</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getColorHex" title="details" class="method-name">getColorHex</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$search_name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getColorName" title="details" class="method-name">getColorName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$search_hex</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getNewFullWindowLink" title="details" class="method-name">getNewFullWindowLink</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">640</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">480</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getNewPlainWindowLink" title="details" class="method-name">getNewPlainWindowLink</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">640</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">480</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getNewScrollingWindowLink" title="details" class="method-name">getNewScrollingWindowLink</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">640</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">480</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getNewWindowLink" title="details" class="method-name">getNewWindowLink</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$features</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#hdelim" title="details" class="method-name">hdelim</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$color</span> = <span class="var-default">&quot;#000000&quot;</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#head" title="details" class="method-name">head</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#inputFormRow" title="details" class="method-name">inputFormRow</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$prompt</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#makeDBMultipleSubSelect" title="details" class="method-name">makeDBMultipleSubSelect</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$query_parameters</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_select</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect1</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect2</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_form</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$select_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect1_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect2_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$use_ids</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$show_all</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#makeDBSubSelect" title="details" class="method-name">makeDBSubSelect</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$query_parameters</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_select</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_form</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$select_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$use_ids</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$show_all</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#makeDisplayAllRows" title="details" class="method-name">makeDisplayAllRows</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#makeMultipleSubSelect" title="details" class="method-name">makeMultipleSubSelect</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$select1_values</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$select2_values</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_select</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect1</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect2</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_form</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$select_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect1_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect2_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$use_ids</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#makeReadable" title="details" class="method-name">makeReadable</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#makeSecurityObjectSelect" title="details" class="method-name">makeSecurityObjectSelect</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name_of_select</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_form</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$select_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$show_all_select</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$show_all_subselect</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#makeSubSelect" title="details" class="method-name">makeSubSelect</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$select_values</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_select</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_form</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$select_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$use_ids</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#makeTableColumnSelect" title="details" class="method-name">makeTableColumnSelect</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name_of_select</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_form</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$select_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$show_all_select</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$show_all_subselect</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#make_link" title="details" class="method-name">make_link</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$linktext</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$target</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$extras</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#make_popup_link" title="details" class="method-name">make_popup_link</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$linktext</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$target</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$windowprops</span> = <span class="var-default">&quot;&quot;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$extras</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#minimalFoot" title="details" class="method-name">minimalFoot</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#minimalHead" title="details" class="method-name">minimalHead</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Code</span>
+										<a href="#openNewWindow" title="details" class="method-name">openNewWindow</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$URL</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$features</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#orNbsp" title="details" class="method-name">orNbsp</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#popupNewFullWindow" title="details" class="method-name">popupNewFullWindow</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">640</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">480</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#popupNewPlainWindow" title="details" class="method-name">popupNewPlainWindow</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">640</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">480</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#popupNewScrollingWindow" title="details" class="method-name">popupNewScrollingWindow</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">640</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">480</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#popupNewWindow" title="details" class="method-name">popupNewWindow</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$features</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#poseAsDocument" title="details" class="method-name">poseAsDocument</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$type</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#redirectParent" title="details" class="method-name">redirectParent</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$URL</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#redirectParentAndClose" title="details" class="method-name">redirectParentAndClose</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$URL</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#redirectWindow" title="details" class="method-name">redirectWindow</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$seconds</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#refreshWindow" title="details" class="method-name">refreshWindow</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$seconds</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#reloadParent" title="details" class="method-name">reloadParent</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#reloadParentAndClose" title="details" class="method-name">reloadParentAndClose</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#setFormAction" title="details" class="method-name">setFormAction</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#submitForm" title="details" class="method-name">submitForm</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodDisplay" id="Display"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor Display</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a70">70</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor which populates the class members</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Display
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcallJS" id="callJS"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">callJS</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a488">488</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates code to call a javascript in place</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Code to call a javascript in place</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			callJS
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$function</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$parameters</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$function</span><span class="var-description">: Name of javascript function</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$parameters</span><span class="var-description">: Parameters to pass to javascript function</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcloseWindow" id="closeWindow"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">closeWindow</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a510">510</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates call to javascript to close current browser window</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Call to javascript to close current browser window</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			closeWindow
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddelim" id="delim"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">delim</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a848">848</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			delim
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$color</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$color</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddisplayTF" id="displayTF"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">displayTF</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a667">667</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Displays a Yes or No based on given data  table based on it</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> coverted data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			displayTF
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span><span class="var-description">: given data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodescapeJsString" id="escapeJsString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">escapeJsString</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a467">467</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Takes a string to be used inside javascript code and  escapes anything that will break the syntax of the javascript</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> escaped text</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			escapeJsString
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: original text</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodescapePostVar" id="escapePostVar"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">escapePostVar</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a377">377</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Escapes variables from a post operation</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> new text</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			escapePostVar
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: text to evaluate</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfoot" id="foot"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">foot</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a308">308</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes HTML for end of document from &lt;/body&gt;</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for end of document from &lt;/body&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			foot
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetColorHex" id="getColorHex"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getColorHex</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a416">416</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Finds the hex value for a named color.  Returns hex for light gray on  failure.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> hex value of a color</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getColorHex
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$search_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$search_name</span><span class="var-description">: name of a color</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetColorName" id="getColorName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getColorName</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a434">434</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Finds the name of a color for a given hex value.  Returns  Lightgray failure.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> name of a color</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getColorName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$search_hex</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$search_hex</span><span class="var-description">: hex value of a color</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetNewFullWindowLink" id="getNewFullWindowLink"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getNewFullWindowLink</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a801">801</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a link to popup a new window that is full featured</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for link to new window</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getNewFullWindowLink
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">640</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">480</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: Body of text for the link</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: URL of the link</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of window</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$width</span><span class="var-description">: Width of the new window</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$height</span><span class="var-description">: Height of the new window</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span><span class="var-description">: Name of stylesheet class to use</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetNewPlainWindowLink" id="getNewPlainWindowLink"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getNewPlainWindowLink</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a767">767</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a link to popup a new window that is very basic</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for link to new window</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getNewPlainWindowLink
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">640</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">480</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: Body of text for the link</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: URL of the link</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of window</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$width</span><span class="var-description">: Width of the new window</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$height</span><span class="var-description">: Height of the new window</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span><span class="var-description">: Name of stylesheet class to use</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetNewScrollingWindowLink" id="getNewScrollingWindowLink"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getNewScrollingWindowLink</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a784">784</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a link to popup a new window that is very basic with scrolling</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for link to new window</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getNewScrollingWindowLink
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">640</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">480</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: Body of text for the link</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: URL of the link</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of window</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$width</span><span class="var-description">: Width of the new window</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$height</span><span class="var-description">: Height of the new window</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span><span class="var-description">: Name of stylesheet class to use</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetNewWindowLink" id="getNewWindowLink"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getNewWindowLink</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a751">751</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a link to popup a new window with the given parameters</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for link to new window</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getNewWindowLink
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$features</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: Body of text for the link</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: URL of the link</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of window</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$features</span><span class="var-description">: Features of the new window</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span><span class="var-description">: Name of stylesheet class to use</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhdelim" id="hdelim"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">hdelim</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a839">839</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			hdelim
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$color</span> = <span class="var-default">&quot;#000000&quot;</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$color</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhead" id="head"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">head</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a125">125</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes HTML for everything from &lt;html&gt; to &lt;body&gt;</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for everything from &lt;html&gt; to &lt;body&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			head
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: Title of the document, if there is a config setting this is appended to it</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Options to apply to the head</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinputFormRow" id="inputFormRow"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">inputFormRow</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a394">394</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a table row with a prompt to the left and a input to the right</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for table row</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			inputFormRow
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$prompt</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prompt</span><span class="var-description">: prompt html for left side</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$body</span><span class="var-description">: input html for right side</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmakeDBMultipleSubSelect" id="makeDBMultipleSubSelect"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">makeDBMultipleSubSelect</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a1113">1113</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			makeDBMultipleSubSelect
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$query_parameters</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_select</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect1</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect2</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_form</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$select_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect1_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect2_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$use_ids</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$show_all</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$query_parameters</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_select</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_subselect1</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_subselect2</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_form</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$select_curval</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$subselect1_curval</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$subselect2_curval</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$use_ids</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$show_all</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmakeDBSubSelect" id="makeDBSubSelect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">makeDBSubSelect</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a930">930</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			makeDBSubSelect
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$query_parameters</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_select</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_form</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$select_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$use_ids</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$show_all</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$query_parameters</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_select</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_subselect</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_form</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$select_curval</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$subselect_curval</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$use_ids</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$show_all</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmakeDisplayAllRows" id="makeDisplayAllRows"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">makeDisplayAllRows</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a610">610</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Takes an array from $db-&gt;doQuery and automatically draws an HTML  table based on it</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML of a table</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			makeDisplayAllRows
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: from $db-&gt;doQuery</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmakeMultipleSubSelect" id="makeMultipleSubSelect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">makeMultipleSubSelect</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a997">997</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			makeMultipleSubSelect
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$select1_values</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$select2_values</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_select</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect1</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect2</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_form</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$select_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect1_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect2_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$use_ids</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$select1_values</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$select2_values</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_select</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_subselect1</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_subselect2</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_form</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$select_curval</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$subselect1_curval</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$subselect2_curval</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$use_ids</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmakeReadable" id="makeReadable"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">makeReadable</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a451">451</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes text such as a column name into a displayable name</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> displayable name</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			makeReadable
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: name of a column</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmakeSecurityObjectSelect" id="makeSecurityObjectSelect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">makeSecurityObjectSelect</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a1226">1226</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			makeSecurityObjectSelect
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name_of_select</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_form</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$select_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$show_all_select</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$show_all_subselect</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_select</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_subselect</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_form</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$select_curval</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$subselect_curval</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$show_all_select</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$show_all_subselect</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmakeSubSelect" id="makeSubSelect"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">makeSubSelect</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a856">856</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			makeSubSelect
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$select_values</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_select</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_form</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$select_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$use_ids</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$select_values</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_select</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_subselect</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_form</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$select_curval</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$subselect_curval</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$use_ids</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmakeTableColumnSelect" id="makeTableColumnSelect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">makeTableColumnSelect</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a1267">1267</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			makeTableColumnSelect
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name_of_select</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_subselect</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name_of_form</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$select_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$subselect_curval</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$show_all_select</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$show_all_subselect</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_select</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_subselect</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_of_form</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$select_curval</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$subselect_curval</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$show_all_select</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$show_all_subselect</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmake_link" id="make_link"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">make_link</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a817">817</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a link using the given parameters  From php.net</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			make_link
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$linktext</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$target</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$extras</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: destination for the link</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$linktext</span><span class="var-description">: text for the link, leave blank for text to be the url</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$target</span><span class="var-description">: target for the link</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$extras</span><span class="var-description">: extra tags for the link</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmake_popup_link" id="make_popup_link"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">make_popup_link</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a826">826</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			make_popup_link
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$linktext</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$target</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$windowprops</span> = <span class="var-default">&quot;&quot;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$extras</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$url</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$linktext</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$target</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$windowprops</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$extras</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodminimalFoot" id="minimalFoot"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">minimalFoot</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a341">341</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes HTML for a minimal foot so processing can still happen but it  will not generate any display</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			minimalFoot
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodminimalHead" id="minimalHead"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">minimalHead</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a246">246</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes HTML for a minimal head so processing can still happen but it  will not generate any display</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			minimalHead
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodopenNewWindow" id="openNewWindow"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">openNewWindow</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a500">500</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates call to javascript to open a new window</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> to call a javascript to open a new window</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Code</span>
+		<span class="method-name">
+			openNewWindow
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$URL</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$features</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$URL</span><span class="var-description">: URL of the new window</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: name of the new window</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$features</span><span class="var-description">: features of the new window (ex. toolbar=no,status=no,scrollbars=no,location=no,menubar=no,directories=no,width=640,height=480)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodorNbsp" id="orNbsp"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">orNbsp</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a362">362</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">If text is empty, returns a non breaking space.  Useful in  table cells so their borders display.  Otherwise returns the  original text.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> new text</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			orNbsp
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: text to evaluate</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpopupNewFullWindow" id="popupNewFullWindow"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">popupNewFullWindow</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a735">735</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Popups new window that is full featured</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Code to popup new window</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			popupNewFullWindow
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">640</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">480</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: URL of the link</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of window</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$width</span><span class="var-description">: Width of the new window</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$height</span><span class="var-description">: Height of the new window</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpopupNewPlainWindow" id="popupNewPlainWindow"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">popupNewPlainWindow</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a705">705</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Popups new window that is very basic</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Code to popup new window</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			popupNewPlainWindow
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">640</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">480</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: URL of the link</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of window</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$width</span><span class="var-description">: Width of the new window</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$height</span><span class="var-description">: Height of the new window</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpopupNewScrollingWindow" id="popupNewScrollingWindow"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">popupNewScrollingWindow</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a720">720</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Popups new window that is very basic with scrolling</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Code to popup new window</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			popupNewScrollingWindow
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">640</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">480</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: URL of the link</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of window</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$width</span><span class="var-description">: Width of the new window</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$height</span><span class="var-description">: Height of the new window</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpopupNewWindow" id="popupNewWindow"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">popupNewWindow</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a691">691</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Popups new window</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Code to popup new window</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			popupNewWindow
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$features</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: URL of the link</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of window</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$features</span><span class="var-description">: Features of the new window</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodposeAsDocument" id="poseAsDocument"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">poseAsDocument</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a273">273</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Replacement for using a head function when your php is creating something  to be treated as a file</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			poseAsDocument
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$type</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodredirectParent" id="redirectParent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">redirectParent</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a521">521</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates call to javascript to redirect parent of current browser window</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Call to javascript to redirect parent of current browser window</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			redirectParent
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$URL</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$URL</span><span class="var-description">: Where to redirect parent</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodredirectParentAndClose" id="redirectParentAndClose"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">redirectParentAndClose</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a542">542</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates call to javascript to reload parent of current browser window and close current browser window</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Call to javascript to reload parent of current browser window and close current browser window</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			redirectParentAndClose
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$URL</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$URL</span><span class="var-description">: Where to redirect parent</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodredirectWindow" id="redirectWindow"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">redirectWindow</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a587">587</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates html to redirect current window in given amount of time</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML to redirect current window in given amount of time</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			redirectWindow
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$seconds</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$url</span><span class="var-description">: Number of seconds to redirect in</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$seconds</span><span class="var-description">: URL to redirect current window to</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrefreshWindow" id="refreshWindow"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">refreshWindow</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a598">598</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates html to refresh current window in given amount of time</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML to refresh current window in given amount of time</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			refreshWindow
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$seconds</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$seconds</span><span class="var-description">: Number of seconds to refresh in</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreloadParent" id="reloadParent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">reloadParent</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a531">531</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates call to javascript to reload parent of current browser window</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Call to javascript to reload parent of current browser window</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			reloadParent
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodreloadParentAndClose" id="reloadParentAndClose"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">reloadParentAndClose</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a552">552</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates call to javascript to reload parent of current browser window and close current browser window</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Call to javascript to reload parent of current browser window and close current browser window</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			reloadParentAndClose
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetFormAction" id="setFormAction"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setFormAction</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a564">564</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates call to javascript to change where a form submits</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Call to javascript to change where a form submits</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			setFormAction
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the form</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: New URL where form submits</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsubmitForm" id="submitForm"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">submitForm</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDisplay.php.html#a575">575</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates call to javascript to submit a form</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Call to javascript to submit a form</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			submitForm
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the form</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 01 Jan 2008 00:07:15 -0800 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

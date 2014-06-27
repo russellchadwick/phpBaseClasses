@@ -1,0 +1,1500 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Security</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Security</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The API for all checking and setting security</p>
+<p class="description"><p>This class defines the API for authenticating users, checking their permissions,  and setting permissions</p></p>
+		<p class="notes">
+			Located in <a class="field" href="_classSecurity.php.html">/classSecurity.php</a> (line <span class="field"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a47">47</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																																																				
+												<div class="method-definition">
+											<span class="method-result">Security</span>
+										<a href="#Security" title="details" class="method-name">Security</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#addUser" title="details" class="method-name">addUser</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$password</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$password2</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$first_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$last_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$email_address</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">&$error</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#addUserRole" title="details" class="method-name">addUserRole</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$role_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">&$error</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_id</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_reference_id</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$allow_duplicates</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#checkNotifications" title="details" class="method-name">checkNotifications</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#checkPermissions" title="details" class="method-name">checkPermissions</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$object_type</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$object_id</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$object_reference_id</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$requested_permission</span> = <span class="var-default">'Read'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#checkSessionVars" title="details" class="method-name">checkSessionVars</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#createOneUseToken" title="details" class="method-name">createOneUseToken</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#deleteOneUseToken" title="details" class="method-name">deleteOneUseToken</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#deletePreference" title="details" class="method-name">deletePreference</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#disableUser" title="details" class="method-name">disableUser</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#enableUser" title="details" class="method-name">enableUser</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getInheritedPermissions" title="details" class="method-name">getInheritedPermissions</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$role_id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getInheritedRoles" title="details" class="method-name">getInheritedRoles</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$role</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getPreference" title="details" class="method-name">getPreference</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$defaultValue</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getReferencedIDForRole" title="details" class="method-name">getReferencedIDForRole</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$role_title</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$object_type</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getReferencedSecurityObject" title="details" class="method-name">getReferencedSecurityObject</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_id</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_reference_id</span> = <span class="var-default">0</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$formatted</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#getRoleID" title="details" class="method-name">getRoleID</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getRolesUsers" title="details" class="method-name">getRolesUsers</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#getSecurityObjectId" title="details" class="method-name">getSecurityObjectId</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getSecurityObjectName" title="details" class="method-name">getSecurityObjectName</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_id</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$any</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getThisUsersPermissions" title="details" class="method-name">getThisUsersPermissions</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getThisUsersPreferences" title="details" class="method-name">getThisUsersPreferences</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getThisUsersRoles" title="details" class="method-name">getThisUsersRoles</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getUsersData" title="details" class="method-name">getUsersData</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$user_id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getUsersPermissions" title="details" class="method-name">getUsersPermissions</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$roles</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getUsersPreferences" title="details" class="method-name">getUsersPreferences</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getUsersRoles" title="details" class="method-name">getUsersRoles</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getUsersWithRole" title="details" class="method-name">getUsersWithRole</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$object_type</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$object_id</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getUsersWithRoleID" title="details" class="method-name">getUsersWithRoleID</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$role_id</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$object_type</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$object_id</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#internalMailUser" title="details" class="method-name">internalMailUser</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$from_system</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#lockData" title="details" class="method-name">lockData</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_id</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_reference_id</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$popup_link</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#mailUser" title="details" class="method-name">mailUser</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$mail_template</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#nameTaken" title="details" class="method-name">nameTaken</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$first_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$last_name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#notifyUser" title="details" class="method-name">notifyUser</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$link_type</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$link</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$from_system</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#processLogin" title="details" class="method-name">processLogin</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$encrypted_password</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$one_use_token</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$redirect</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#removeLock" title="details" class="method-name">removeLock</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_id</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_reference_id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#setPreference" title="details" class="method-name">setPreference</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#usernameTaken" title="details" class="method-name">usernameTaken</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodSecurity" id="Security"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor Security</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a59">59</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class constructor</p>
+	
+	<div class="method-signature">
+		<span class="method-result">Security</span>
+		<span class="method-name">
+			Security
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodaddUser" id="addUser"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">addUser</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a667">667</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate data and create a user if valid</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> user_id on success, 0 on failure</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			addUser
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$password</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$password2</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$first_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$last_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$email_address</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">&$error</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$username</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$password</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$password2</span><span class="var-description">: Will be tested again first password to make sure they match</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$first_name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$last_name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$email_address</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">&$error</span><span class="var-description">: Error message if there is a problem with parameters</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddUserRole" id="addUserRole"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">addUserRole</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a1079">1079</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add role to existing user</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether successful</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			addUserRole
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$role_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">&$error</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_id</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_reference_id</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$allow_duplicates</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$user_id</span><span class="var-description">: ID of user to add role to</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$role_id</span><span class="var-description">: ID of role to add</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">&$error</span><span class="var-description">: Error message if there is a problem with parameters</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$security_object_id</span><span class="var-description">: ID of security object this role refers to</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$security_object_reference_id</span><span class="var-description">: ID of column that security object refers to</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$allow_duplicates</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcheckNotifications" id="checkNotifications"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">checkNotifications</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a769">769</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a table with the users current notices and deletes those notices</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> table with the users current notices</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			checkNotifications
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcheckPermissions" id="checkPermissions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">checkPermissions</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a72">72</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check if logged in user has permissions to a given object</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Is permission granted?</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			checkPermissions
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$object_type</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$object_id</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$object_reference_id</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$requested_permission</span> = <span class="var-default">'Read'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$object_type</span><span class="var-description">: Either the name of a role or the name of a security object that we are looking for</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$object_id</span><span class="var-description">: A specific id to search for permissions on</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$object_reference_id</span><span class="var-description">: One of Read, Modify, Delete where delete inherits Modify and Read, and Modify inherits Read</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$requested_permission</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcheckSessionVars" id="checkSessionVars"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">checkSessionVars</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a214">214</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check whether accessing a protected area  Check whether required session vars are present and values are good  Update last access time to kick someone after inactivity</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether successful</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			checkSessionVars
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcreateOneUseToken" id="createOneUseToken"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">createOneUseToken</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a1219">1219</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create a one use token</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Token created</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			createOneUseToken
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$user_id</span><span class="var-description">: ID of user to create one use token for</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteOneUseToken" id="deleteOneUseToken"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">deleteOneUseToken</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a1246">1246</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete a one use token</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether successful</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			deleteOneUseToken
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$user_id</span><span class="var-description">: ID of user to create one use token for</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$token</span><span class="var-description">: Token that was used and needs to be removed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeletePreference" id="deletePreference"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">deletePreference</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a1053">1053</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete a preference for a user</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Success</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			deletePreference
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: Key name for preference</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddisableUser" id="disableUser"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">disableUser</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a958">958</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Disables a user</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether disabling was successful</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			disableUser
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$user_id</span><span class="var-description">: ID of user to disable</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodenableUser" id="enableUser"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">enableUser</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a979">979</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Enables a user</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether disabling was successful</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			enableUser
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$user_id</span><span class="var-description">: ID of user to enable</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetInheritedPermissions" id="getInheritedPermissions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getInheritedPermissions</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a322">322</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a list of permissions which are inherited per specified role</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (count=&gt;array ('type', 'security_object_id', 'security_object', 'security_object_reference_id'))</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getInheritedPermissions
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$role_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$role_id</span><span class="var-description">: ID of role to fetch inherited permissions for</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetInheritedRoles" id="getInheritedRoles"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getInheritedRoles</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a288">288</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a list of roles which are inherited per specified role</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (count=&gt;array ('role_id', 'title', 'security_object_id', 'security_object', 'security_object_reference_id'))</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getInheritedRoles
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$role</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$role</span><span class="var-description">: ('role_id', 'security_object_id', 'security_object_reference_id') Record of data pulled from security.roles table</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetPreference" id="getPreference"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getPreference</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a1001">1001</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get preference for a user</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Value of preference or default if none was found</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getPreference
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$defaultValue</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: Key name for preference</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$defaultValue</span><span class="var-description">: Default value of preference</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetReferencedIDForRole" id="getReferencedIDForRole"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getReferencedIDForRole</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a266">266</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get Reference IDs for given role information</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> IDs for given role information</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getReferencedIDForRole
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$role_title</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$object_type</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$role_title</span><span class="var-description">: Title of a role that we are looking for</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$object_type</span><span class="var-description">: The type of object we are looking for</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetReferencedSecurityObject" id="getReferencedSecurityObject"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getReferencedSecurityObject</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a503">503</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a computer readable or nicely formatted information about given security object</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Textual representation of the security object</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getReferencedSecurityObject
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_id</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_reference_id</span> = <span class="var-default">0</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$formatted</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$security_object_id</span><span class="var-description">: ID of a security_object we need the name of</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$security_object_reference_id</span><span class="var-description">: ID of the object referenced by security_object we need the name of</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$formatted</span><span class="var-description">: Whether or not to format the return value nicely</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetRoleID" id="getRoleID"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRoleID</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a1125">1125</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the ID for the given role title</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ID of the given role title</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getRoleID
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: Title of a role</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetRolesUsers" id="getRolesUsers"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRolesUsers</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a586">586</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a list of users that have the specified role</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (count=&gt;user_id)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getRolesUsers
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: Title of the role to search for</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSecurityObjectId" id="getSecurityObjectId"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSecurityObjectId</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a569">569</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the ID for a specificed security object name</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ID of the security object</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getSecurityObjectId
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the security we need the ID of</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSecurityObjectName" id="getSecurityObjectName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSecurityObjectName</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a544">544</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the name for a specificed security object ID</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Name of the security object</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getSecurityObjectName
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_id</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$any</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$security_object_id</span><span class="var-description">: ID of a security_object we need the name of</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$any</span><span class="var-description">: Whether an empty id should represent 'Any' or null, useful for formatting.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetThisUsersPermissions" id="getThisUsersPermissions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getThisUsersPermissions</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a480">480</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a currently logged in users permissions</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (count=&gt;array ('type', 'security_object_id', 'security_object', 'security_object_reference_id'))</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getThisUsersPermissions
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetThisUsersPreferences" id="getThisUsersPreferences"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getThisUsersPreferences</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a490">490</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a currently logged in users preferences</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (count=&gt;array ('user_preference_id', 'key', 'value'))</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getThisUsersPreferences
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetThisUsersRoles" id="getThisUsersRoles"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getThisUsersRoles</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a470">470</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a currently logged in users roles</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (count=&gt;array ('role_id', 'title', 'security_object_id', 'security_object', 'security_object_reference_id'))</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getThisUsersRoles
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetUsersData" id="getUsersData"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUsersData</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a365">365</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieves some information about a user</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> information about a user</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getUsersData
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$user_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$user_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetUsersPermissions" id="getUsersPermissions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUsersPermissions</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a413">413</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a users permissions</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (count=&gt;array ('type', 'security_object_id', 'security_object', 'security_object_reference_id'))</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getUsersPermissions
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$roles</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$user_id</span><span class="var-description">: Users id from security.users.user_id</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$roles</span><span class="var-description">: Result from calling getUsersRoles or getThisUsersRoles</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetUsersPreferences" id="getUsersPreferences"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUsersPreferences</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a442">442</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a users preferences</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (count=&gt;array ('user_preference_id', 'key', 'value'))</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getUsersPreferences
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$user_id</span><span class="var-description">: Users id from security.users.user_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetUsersRoles" id="getUsersRoles"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUsersRoles</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a383">383</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a users roles</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (count=&gt;array ('role_id', 'title', 'security_object_id', 'security_object', 'security_object_reference_id'))</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getUsersRoles
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$user_id</span><span class="var-description">: Users id from security.users.user_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetUsersWithRole" id="getUsersWithRole"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUsersWithRole</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a650">650</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a list of users that have the specified role to specific item</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (count=&gt;user_id)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getUsersWithRole
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$object_type</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$object_id</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: Title of the role to search for</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$object_type</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$object_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetUsersWithRoleID" id="getUsersWithRoleID"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUsersWithRoleID</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a611">611</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a list of users that have the specified role to specific item</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> (count=&gt;user_id)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getUsersWithRoleID
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$role_id</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$object_type</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$object_id</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$role_id</span><span class="var-description">: ID of the role to search for</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$object_type</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$object_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinternalMailUser" id="internalMailUser"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">internalMailUser</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a875">875</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sends an internal mail to a user, admins are allowed to make message appear to come from system</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether internal mailing was successful</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			internalMailUser
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$from_system</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$user_id</span><span class="var-description">: ID of user to mail internally</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$subject</span><span class="var-description">: Subject of the mail</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$body</span><span class="var-description">: Body of the mail</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$from_system</span><span class="var-description">: Whether make message appear to come from system</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlockData" id="lockData"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">lockData</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a1143">1143</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if data is locked, locks if available.</p>
+<p class="description"><p>Deletes a lock if it has gone stale.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Empty on success, message regarding who holds lock on failure.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			lockData
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_id</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_reference_id</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$popup_link</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$security_object_id</span><span class="var-description">: ID of a security_object to be locked</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$security_object_reference_id</span><span class="var-description">: ID of the object referenced by security_object to be locked</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$popup_link</span><span class="var-description">: Whether to make a popup window come up to check for lock to be released</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmailUser" id="mailUser"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">mailUser</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a923">923</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mails a user and logs it to the mail_logs.</p>
+<p class="description"><p>Search and replace is performed on %FIRST_NAME%, %LAST_NAME%, %USERNAME%</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether mailing was successful</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			mailUser
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$mail_template</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$user_id</span><span class="var-description">: ID of user to mail</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mail_template</span><span class="var-description">: Name of mail, since either mail wont be logged this is so you can tell which mail was sent</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$subject</span><span class="var-description">: Subject of the mail</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$body</span><span class="var-description">: Body of the mail</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodnameTaken" id="nameTaken"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">nameTaken</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a737">737</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if a name is taken</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether name is taken</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			nameTaken
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$first_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$last_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$first_name</span><span class="var-description">: first_name to test for</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$last_name</span><span class="var-description">: last_name to test for</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodnotifyUser" id="notifyUser"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">notifyUser</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a840">840</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Notify a user about something, admins are allowed to make message appear to come from system</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether mailing was successful</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			notifyUser
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$user_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$link_type</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$link</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$from_system</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$user_id</span><span class="var-description">: ID of user to notify</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: Text of the notification</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$link_type</span><span class="var-description">: Type of link: popup, plain, or the name of a frame</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$link</span><span class="var-description">: Link itself, where to send people to view details about this notice</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$from_system</span><span class="var-description">: Whether make message appear to come from system</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodprocessLogin" id="processLogin"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">processLogin</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a125">125</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Process a submitted login</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			processLogin
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$encrypted_password</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$one_use_token</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$redirect</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$username</span><span class="var-description">: Username to login</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$encrypted_password</span><span class="var-description">: Encrypted password of user</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$one_use_token</span><span class="var-description">: One use token for automatic login</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$redirect</span><span class="var-description">: Whether to redirect the user to the default URI</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveLock" id="removeLock"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">removeLock</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a1195">1195</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete a lock owned by current user</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether successful</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			removeLock
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_id</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$security_object_reference_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$security_object_id</span><span class="var-description">: ID of a security_object to be locked</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$security_object_reference_id</span><span class="var-description">: ID of the object referenced by security_object to be locked</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPreference" id="setPreference"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPreference</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a1017">1017</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets a preference for a user</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Value of preference</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			setPreference
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: Key name for preference</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: Value of preference</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodusernameTaken" id="usernameTaken"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">usernameTaken</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classSecurity.php.html#a718">718</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if a username is taken</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether username is taken</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			usernameTaken
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$username</span><span class="var-description">: username to test for</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 01 Jan 2008 00:07:25 -0800 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

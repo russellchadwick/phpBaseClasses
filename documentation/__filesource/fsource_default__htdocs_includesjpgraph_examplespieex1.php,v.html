@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for pieex1.php,v</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file pieex1.php,v</h1>
+<p>Documentation is available at <a href="../default/_htdocs_includes---jpgraph_examples---pieex1.php,v.html">pieex1.php,v</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$GRAPH&nbsp;</span>=&nbsp;<span class="src-key">array&nbsp;</span><span class="src-sym">(</span><span class="src-str">'pie'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a3"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-inc">include&nbsp;</span><span class="src-str">'begin.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a4"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$display</span><span class="src-sym">-&gt;</span><span class="src-id">minimalHead&nbsp;</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a5"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-comm">//&nbsp;Some&nbsp;data</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-var">$data&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-num">113</span><span class="src-sym">,</span><span class="src-num">5</span><span class="src-sym">,</span><span class="src-num">160</span><span class="src-sym">,</span><span class="src-num">3</span><span class="src-sym">,</span><span class="src-num">15</span><span class="src-sym">,</span><span class="src-num">10</span><span class="src-sym">,</span><span class="src-num">1</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a8"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-comm">//&nbsp;Create&nbsp;the&nbsp;Pie&nbsp;Graph.</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-var">$graph&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../default/PieGraph.html">PieGraph</a></span><span class="src-sym">(</span><span class="src-num">300</span><span class="src-sym">,</span><span class="src-num">200</span><span class="src-sym">,</span><span class="src-str">&quot;auto&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-var">$graph</span><span class="src-sym">-&gt;</span><span class="src-id">SetShadow</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a12"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-comm">//&nbsp;Set&nbsp;A&nbsp;title&nbsp;for&nbsp;the&nbsp;plot</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-var">$graph</span><span class="src-sym">-&gt;</span><span class="src-id">title</span><span class="src-sym">-&gt;</span><span class="src-id">Set</span><span class="src-sym">(</span><span class="src-str">&quot;Example&nbsp;1&nbsp;Pie&nbsp;plot&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-var">$graph</span><span class="src-sym">-&gt;</span><span class="src-id">title</span><span class="src-sym">-&gt;</span><span class="src-id">SetFont</span><span class="src-sym">(</span><span class="src-id"><a href="../default/_addons---jpgraph---jpgraph.php,v.html#defineFF_VERDANA">FF_VERDANA</a></span><span class="src-sym">,</span><span class="src-id"><a href="../default/_addons---jpgraph---jpgraph.php,v.html#defineFS_BOLD">FS_BOLD</a></span><span class="src-sym">,</span><span class="src-num">14</span><span class="src-sym">)</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-var">$graph</span><span class="src-sym">-&gt;</span><span class="src-id">title</span><span class="src-sym">-&gt;</span><span class="src-id">SetColor</span><span class="src-sym">(</span><span class="src-str">&quot;brown&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a17"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-comm">//&nbsp;Create&nbsp;pie&nbsp;plot</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-var">$p1&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../default/PiePlot.html">PiePlot</a></span><span class="src-sym">(</span><span class="src-var">$data</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-comm">//$p1-&gt;SetSliceColors(array(&quot;red&quot;,&quot;blue&quot;,&quot;yellow&quot;,&quot;green&quot;));</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-var">$p1</span><span class="src-sym">-&gt;</span><span class="src-id">SetTheme</span><span class="src-sym">(</span><span class="src-str">&quot;earth&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-var">$p1</span><span class="src-sym">-&gt;</span><span class="src-id">value</span><span class="src-sym">-&gt;</span><span class="src-id">SetFont</span><span class="src-sym">(</span><span class="src-id"><a href="../default/_addons---jpgraph---jpgraph.php,v.html#defineFF_ARIAL">FF_ARIAL</a></span><span class="src-sym">,</span><span class="src-id"><a href="../default/_addons---jpgraph---jpgraph.php,v.html#defineFS_NORMAL">FS_NORMAL</a></span><span class="src-sym">,</span><span class="src-num">10</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-comm">//&nbsp;Set&nbsp;how&nbsp;many&nbsp;pixels&nbsp;each&nbsp;slice&nbsp;should&nbsp;explode</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-var">$p1</span><span class="src-sym">-&gt;</span><span class="src-id">Explode</span><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,</span><span class="src-num">15</span><span class="src-sym">,</span><span class="src-num">15</span><span class="src-sym">,</span><span class="src-num">25</span><span class="src-sym">,</span><span class="src-num">15</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-var">$graph</span><span class="src-sym">-&gt;</span><span class="src-id">Add</span><span class="src-sym">(</span><span class="src-var">$p1</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-var">$graph</span><span class="src-sym">-&gt;</span><span class="src-id">Stroke</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 25 Apr 2007 00:14:21 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</body>
+</html>

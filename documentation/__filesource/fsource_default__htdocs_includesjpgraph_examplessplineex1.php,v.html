@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for splineex1.php,v</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file splineex1.php,v</h1>
+<p>Documentation is available at <a href="../default/_htdocs_includes---jpgraph_examples---splineex1.php,v.html">splineex1.php,v</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$GRAPH&nbsp;</span>=&nbsp;<span class="src-key">array&nbsp;</span><span class="src-sym">(</span><span class="src-str">'line'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'regstat'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'scatter'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a3"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-inc">include&nbsp;</span><span class="src-str">'begin.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a4"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$display</span><span class="src-sym">-&gt;</span><span class="src-id">minimalHead&nbsp;</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a5"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-comm">//&nbsp;Original&nbsp;data&nbsp;points</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-var">$xdata&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-num">1</span><span class="src-sym">,</span><span class="src-num">3</span><span class="src-sym">,</span><span class="src-num">5</span><span class="src-sym">,</span><span class="src-num">7</span><span class="src-sym">,</span><span class="src-num">9</span><span class="src-sym">,</span><span class="src-num">12</span><span class="src-sym">,</span><span class="src-num">15</span><span class="src-sym">,</span><span class="src-num">17.1</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-var">$ydata&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-num">5</span><span class="src-sym">,</span><span class="src-num">1</span><span class="src-sym">,</span><span class="src-num">9</span><span class="src-sym">,</span><span class="src-num">6</span><span class="src-sym">,</span><span class="src-num">4</span><span class="src-sym">,</span><span class="src-num">3</span><span class="src-sym">,</span><span class="src-num">19</span><span class="src-sym">,</span><span class="src-num">12</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a9"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-comm">//&nbsp;Get&nbsp;the&nbsp;interpolated&nbsp;values&nbsp;by&nbsp;creating</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-comm">//&nbsp;a&nbsp;new&nbsp;Spline&nbsp;object.</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-var">$spline&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../default/Spline.html">Spline</a></span><span class="src-sym">(</span><span class="src-var">$xdata</span><span class="src-sym">,</span><span class="src-var">$ydata</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a13"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-comm">//&nbsp;For&nbsp;the&nbsp;new&nbsp;data&nbsp;set&nbsp;we&nbsp;want&nbsp;40&nbsp;points&nbsp;to</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-comm">//&nbsp;get&nbsp;a&nbsp;smooth&nbsp;curve.</span></div></li>
+<li><div class="src-line"><a name="a16"></a>list<span class="src-sym">(</span><span class="src-var">$newx</span><span class="src-sym">,</span><span class="src-var">$newy</span><span class="src-sym">)&nbsp;</span>=&nbsp;<span class="src-var">$spline</span><span class="src-sym">-&gt;</span><span class="src-id">Get</span><span class="src-sym">(</span><span class="src-num">50</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a17"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-comm">//&nbsp;Create&nbsp;the&nbsp;graph</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-var">$g&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../default/Graph.html">Graph</a></span><span class="src-sym">(</span><span class="src-num">300</span><span class="src-sym">,</span><span class="src-num">200</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-var">$g</span><span class="src-sym">-&gt;</span><span class="src-id">SetMargin</span><span class="src-sym">(</span><span class="src-num">30</span><span class="src-sym">,</span><span class="src-num">20</span><span class="src-sym">,</span><span class="src-num">40</span><span class="src-sym">,</span><span class="src-num">30</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-var">$g</span><span class="src-sym">-&gt;</span><span class="src-id">title</span><span class="src-sym">-&gt;</span><span class="src-id">Set</span><span class="src-sym">(</span><span class="src-str">&quot;Natural&nbsp;cubic&nbsp;splines&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-var">$g</span><span class="src-sym">-&gt;</span><span class="src-id">title</span><span class="src-sym">-&gt;</span><span class="src-id">SetFont</span><span class="src-sym">(</span><span class="src-id"><a href="../default/_addons---jpgraph---jpgraph.php,v.html#defineFF_ARIAL">FF_ARIAL</a></span><span class="src-sym">,</span><span class="src-id"><a href="../default/_addons---jpgraph---jpgraph.php,v.html#defineFS_NORMAL">FS_NORMAL</a></span><span class="src-sym">,</span><span class="src-num">12</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-var">$g</span><span class="src-sym">-&gt;</span><span class="src-id">subtitle</span><span class="src-sym">-&gt;</span><span class="src-id">Set</span><span class="src-sym">(</span><span class="src-str">'(Control&nbsp;points&nbsp;shown&nbsp;in&nbsp;red)'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-var">$g</span><span class="src-sym">-&gt;</span><span class="src-id">subtitle</span><span class="src-sym">-&gt;</span><span class="src-id">SetColor</span><span class="src-sym">(</span><span class="src-str">'darkred'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-var">$g</span><span class="src-sym">-&gt;</span><span class="src-id">SetMarginColor</span><span class="src-sym">(</span><span class="src-str">'lightblue'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-comm">//$g-&gt;img-&gt;SetAntiAliasing();</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-comm">//&nbsp;We&nbsp;need&nbsp;a&nbsp;linlin&nbsp;scale&nbsp;since&nbsp;we&nbsp;provide&nbsp;both</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-comm">//&nbsp;x&nbsp;and&nbsp;y&nbsp;coordinates&nbsp;for&nbsp;the&nbsp;data&nbsp;points.</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-var">$g</span><span class="src-sym">-&gt;</span><span class="src-id">SetScale</span><span class="src-sym">(</span><span class="src-str">'linlin'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-comm">//&nbsp;We&nbsp;want&nbsp;1&nbsp;decimal&nbsp;for&nbsp;the&nbsp;X-label</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-var">$g</span><span class="src-sym">-&gt;</span><span class="src-id">xaxis</span><span class="src-sym">-&gt;</span><span class="src-id">SetLabelFormat</span><span class="src-sym">(</span><span class="src-str">'%1.1f'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-comm">//&nbsp;We&nbsp;use&nbsp;a&nbsp;scatterplot&nbsp;to&nbsp;illustrate&nbsp;the&nbsp;original</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-comm">//&nbsp;contro&nbsp;points.</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-var">$splot&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../default/ScatterPlot.html">ScatterPlot</a></span><span class="src-sym">(</span><span class="src-var">$ydata</span><span class="src-sym">,</span><span class="src-var">$xdata</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-comm">//&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-var">$splot</span><span class="src-sym">-&gt;</span><span class="src-id">mark</span><span class="src-sym">-&gt;</span><span class="src-id">SetFillColor</span><span class="src-sym">(</span><span class="src-str">'red@0.3'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-var">$splot</span><span class="src-sym">-&gt;</span><span class="src-id">mark</span><span class="src-sym">-&gt;</span><span class="src-id">SetColor</span><span class="src-sym">(</span><span class="src-str">'red@0.5'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a44"></a><span class="src-comm">//&nbsp;And&nbsp;a&nbsp;line&nbsp;plot&nbsp;to&nbsp;stroke&nbsp;the&nbsp;smooth&nbsp;curve&nbsp;we&nbsp;got</span></div></li>
+<li><div class="src-line"><a name="a45"></a><span class="src-comm">//&nbsp;from&nbsp;the&nbsp;original&nbsp;control&nbsp;points</span></div></li>
+<li><div class="src-line"><a name="a46"></a><span class="src-var">$lplot&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../default/LinePlot.html">LinePlot</a></span><span class="src-sym">(</span><span class="src-var">$newy</span><span class="src-sym">,</span><span class="src-var">$newx</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a47"></a><span class="src-var">$lplot</span><span class="src-sym">-&gt;</span><span class="src-id">SetColor</span><span class="src-sym">(</span><span class="src-str">'navy'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a49"></a><span class="src-comm">//&nbsp;Add&nbsp;the&nbsp;plots&nbsp;to&nbsp;the&nbsp;graph&nbsp;and&nbsp;stroke</span></div></li>
+<li><div class="src-line"><a name="a50"></a><span class="src-var">$g</span><span class="src-sym">-&gt;</span><span class="src-id">Add</span><span class="src-sym">(</span><span class="src-var">$lplot</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a51"></a><span class="src-var">$g</span><span class="src-sym">-&gt;</span><span class="src-id">Add</span><span class="src-sym">(</span><span class="src-var">$splot</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a52"></a><span class="src-var">$g</span><span class="src-sym">-&gt;</span><span class="src-id">Stroke</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a54"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 25 Apr 2007 00:15:42 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</body>
+</html>

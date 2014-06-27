@@ -1,0 +1,2828 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class DataInput</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class DataInput</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Classes to assist in inputing data. This includes everything from  routines for creating simple dropdowns to functions for collecting  data based on table description.  See the auto_administration_tool.php  for examples of using this library.</p>
+		<p class="notes">
+			Located in <a class="field" href="_classDataInput.php.html">/classDataInput.php</a> (line <span class="field"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a47">47</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#DataInput" title="details" class="method-name">DataInput</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$description</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#addErrorMessages" title="details" class="method-name">addErrorMessages</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$edits</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$validate</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#displayEditByName" title="details" class="method-name">displayEditByName</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$index</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getCurrentValues" title="details" class="method-name">getCurrentValues</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$edits</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getEditByName" title="details" class="method-name">getEditByName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getOrCreate" title="details" class="method-name">getOrCreate</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$id_column</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$other_columns</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$name_column</span> = <span class="var-default">'name'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getSaveValue" title="details" class="method-name">getSaveValue</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$edit</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getSequenceData" title="details" class="method-name">getSequenceData</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">HTML</span>
+										<a href="#getValidateAll" title="details" class="method-name">getValidateAll</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$edits</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#loadDescription" title="details" class="method-name">loadDescription</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$description</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#makeEdit" title="details" class="method-name">makeEdit</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$description</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#makeEditAll" title="details" class="method-name">makeEditAll</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$current_values</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#makeSQL" title="details" class="method-name">makeSQL</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$edits</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'INSERT'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#naBox" title="details" class="method-name">naBox</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#popupHelp" title="details" class="method-name">popupHelp</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">999</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#saveBoolean" title="details" class="method-name">saveBoolean</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#saveCircle" title="details" class="method-name">saveCircle</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#saveData" title="details" class="method-name">saveData</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#saveDate" title="details" class="method-name">saveDate</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#saveEmpty" title="details" class="method-name">saveEmpty</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#saveFile" title="details" class="method-name">saveFile</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#saveInet" title="details" class="method-name">saveInet</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#saveMacaddr" title="details" class="method-name">saveMacaddr</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#saveMessage" title="details" class="method-name">saveMessage</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$update_status</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#saveNA" title="details" class="method-name">saveNA</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#saveNullable" title="details" class="method-name">saveNullable</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$data</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$edit</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#saveNumeric" title="details" class="method-name">saveNumeric</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#savePassword" title="details" class="method-name">savePassword</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'md5'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#savePoint" title="details" class="method-name">savePoint</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#saveReal" title="details" class="method-name">saveReal</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#saveTime" title="details" class="method-name">saveTime</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#saveTimestamp" title="details" class="method-name">saveTimestamp</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#select" title="details" class="method-name">select</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$keyval</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectCountry" title="details" class="method-name">selectCountry</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">'US'</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectDate" title="details" class="method-name">selectDate</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectDay" title="details" class="method-name">selectDay</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectDayOfLastWeek" title="details" class="method-name">selectDayOfLastWeek</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectDayOfThisWeek" title="details" class="method-name">selectDayOfThisWeek</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectDB" title="details" class="method-name">selectDB</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$column</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span> = <span class="var-default">false</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectDBSimple" title="details" class="method-name">selectDBSimple</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$id_column</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name_column</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span> = <span class="var-default">false</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectHour" title="details" class="method-name">selectHour</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectKeysOnly" title="details" class="method-name">selectKeysOnly</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectMinute" title="details" class="method-name">selectMinute</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectMonth" title="details" class="method-name">selectMonth</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectPercentage" title="details" class="method-name">selectPercentage</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectQuery" title="details" class="method-name">selectQuery</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$is_nullable</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>], <span class="var-type">array</span>&nbsp;<span class="var-name">6</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">7</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectSecond" title="details" class="method-name">selectSecond</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectTimezone" title="details" class="method-name">selectTimezone</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectWeeklyInterval" title="details" class="method-name">selectWeeklyInterval</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectYear" title="details" class="method-name">selectYear</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$min</span> = <span class="var-default">1900</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span> = <span class="var-default">2099</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#selectYesNo" title="details" class="method-name">selectYesNo</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#validateByName" title="details" class="method-name">validateByName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#validateCharacterSet" title="details" class="method-name">validateCharacterSet</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$character_set</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#validateCircle" title="details" class="method-name">validateCircle</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#validateDate" title="details" class="method-name">validateDate</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#validateDigits" title="details" class="method-name">validateDigits</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#validateEmail" title="details" class="method-name">validateEmail</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#validateEmpty" title="details" class="method-name">validateEmpty</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#validateFile" title="details" class="method-name">validateFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#validateHex" title="details" class="method-name">validateHex</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#validateInet" title="details" class="method-name">validateInet</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#validateLength" title="details" class="method-name">validateLength</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$min</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#validateMacaddr" title="details" class="method-name">validateMacaddr</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#validateMatching" title="details" class="method-name">validateMatching</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name1</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name2</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#validateMaximumLength" title="details" class="method-name">validateMaximumLength</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#validateMinimumLength" title="details" class="method-name">validateMinimumLength</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$min</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#validateNumber" title="details" class="method-name">validateNumber</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$min</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#validateNumeric" title="details" class="method-name">validateNumeric</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$whole_max</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$decimal_max</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#validatePoint" title="details" class="method-name">validatePoint</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#validateRange" title="details" class="method-name">validateRange</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$min</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#validateReal" title="details" class="method-name">validateReal</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$precision</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodDataInput" id="DataInput"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor DataInput</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a87">87</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor which optionally takes a description.  If a description is not  provided, certain functions will fail.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			DataInput
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$description</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$description</span><span class="var-description">: Description from $db-&gt;doDescribe</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddErrorMessages" id="addErrorMessages"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">addErrorMessages</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1949">1949</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addErrorMessages
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$edits</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$validate</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$edits</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$validate</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddisplayEditByName" id="displayEditByName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">displayEditByName</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a264">264</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Uses getEditByName then arrages certain fields suitable  for dropping into a 5 column table</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			displayEditByName
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$index</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$index</span><span class="var-description">: ID of column, used to determine whether even or odd row</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the column to create edit for</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value for this field</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Options to apply to that field</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetCurrentValues" id="getCurrentValues"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getCurrentValues</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1938">1938</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getCurrentValues
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$edits</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$edits</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetEditByName" id="getEditByName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getEditByName</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a243">243</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Finds column data in the full description and passes that columns  description to makeEdit</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getEditByName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the column to create edit for</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value for this field</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Options to apply to that field</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetOrCreate" id="getOrCreate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getOrCreate</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1960">1960</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getOrCreate
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$id_column</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$other_columns</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$name_column</span> = <span class="var-default">'name'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$table</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id_column</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$other_columns</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name_column</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSaveValue" id="getSaveValue"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSaveValue</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1841">1841</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getSaveValue
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$edit</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$edit</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSequenceData" id="getSequenceData"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSequenceData</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1926">1926</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns array of all sequences in the current description</p>
+<p class="description"><p>access public  return array All sequences in the current description</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getSequenceData
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetValidateAll" id="getValidateAll"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getValidateAll</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a156">156</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates a javascript call to validate the form before  it actually gets submitted, when it should be checked  more thouroughly</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> for Javascript call to validate the form</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">HTML</span>
+		<span class="method-name">
+			getValidateAll
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$edits</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$edits</span><span class="var-description">: return value from makeEditAll</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Either JS or PHP depending on where you are validating</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadDescription" id="loadDescription"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">loadDescription</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a134">134</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loads a description of a table.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadDescription
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$description</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$description</span><span class="var-description">: Description from $db-&gt;doDescribe</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmakeEdit" id="makeEdit"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">makeEdit</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a302">302</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Auto generates an input based on an slice of $db-&gt;doDescribe  and returns the html for inputting the data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			makeEdit
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$description</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$description</span><span class="var-description">: Description of the column, one piece of table description</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value for this field</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Options to apply to that field</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmakeEditAll" id="makeEditAll"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">makeEditAll</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a216">216</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Goes through description and calls getEditByName on  each field.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of all edit arrays</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			makeEditAll
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$current_values</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$current_values</span><span class="var-description">: Key must match column_name in description, value is current value</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Key must match column_name in description, value is array of options to apply to that field</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmakeSQL" id="makeSQL"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">makeSQL</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1860">1860</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			makeSQL
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$edits</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'INSERT'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$edits</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodnaBox" id="naBox"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">naBox</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a640">640</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a N/A Box for use where some data is nullable</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			naBox
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpopupHelp" id="popupHelp"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">popupHelp</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1207">1207</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes some HTML to display some help using the overlib library</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for help box</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			popupHelp
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">999</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: Title of help box</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: Contents of help box</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tabindex</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveBoolean" id="saveBoolean"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveBoolean</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1696">1696</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Data to save for being a valid boolean data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Data to save</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			saveBoolean
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of description to save</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveCircle" id="saveCircle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveCircle</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1744">1744</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Data to save for being a valid circle data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Data to save</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			saveCircle
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of description to save</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveData" id="saveData"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveData</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1666">1666</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			saveData
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveDate" id="saveDate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveDate</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1756">1756</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Data to save for being a valid date data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Data to save</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			saveDate
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of description to save</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$count</span><span class="var-description">: How many boxes the date is spread across</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveEmpty" id="saveEmpty"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveEmpty</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1670">1670</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			saveEmpty
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveFile" id="saveFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveFile</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1810">1810</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			saveFile
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveInet" id="saveInet"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveInet</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1795">1795</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Data to save for being a valid inet data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Data to save</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			saveInet
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of description to save</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveMacaddr" id="saveMacaddr"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveMacaddr</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1806">1806</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Data to save for being a valid macaddr data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Data to save</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			saveMacaddr
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of description to save</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveMessage" id="saveMessage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveMessage</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1908">1908</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			saveMessage
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$update_status</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$update_status</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveNA" id="saveNA"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveNA</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1681">1681</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tests if an NA box was checked for given column</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether an NA box was checked for given column</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			saveNA
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of description to test</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveNullable" id="saveNullable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveNullable</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1829">1829</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			saveNullable
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$data</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$edit</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$data</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$edit</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveNumeric" id="saveNumeric"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveNumeric</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1711">1711</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Data to save for being a valid numeric data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Data to save</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			saveNumeric
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of description to save</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsavePassword" id="savePassword"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">savePassword</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1815">1815</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			savePassword
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'md5'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsavePoint" id="savePoint"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">savePoint</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1733">1733</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Data to save for being a valid point data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Data to save</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			savePoint
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of description to save</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveReal" id="saveReal"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveReal</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1722">1722</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Data to save for being a valid real data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Data to save</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			saveReal
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of description to save</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveTime" id="saveTime"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveTime</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1784">1784</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Data to save for being a valid time data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Data to save</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			saveTime
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of description to save</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveTimestamp" id="saveTimestamp"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveTimestamp</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1773">1773</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Data to save for being a valid timestamp data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Data to save</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			saveTimestamp
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of description to save</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselect" id="select"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">select</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1015">1015</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting data pulled from data given to function</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			select
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$keyval</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: single dimensional key=&gt;value or just key, data to be placed in drop box</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$keyval</span><span class="var-description">: Whether to use value for displayed data or just display the key</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectCountry" id="selectCountry"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectCountry</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a908">908</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting a country</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectCountry
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">'US'</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectDate" id="selectDate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectDate</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a729">729</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes 3 drop boxes for selecting a date</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectDate
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectDay" id="selectDay"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectDay</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a693">693</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting a day</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectDay
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectDayOfLastWeek" id="selectDayOfLastWeek"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectDayOfLastWeek</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a801">801</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting a day from the previous week</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectDayOfLastWeek
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectDayOfThisWeek" id="selectDayOfThisWeek"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectDayOfThisWeek</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a826">826</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting a day from the current week</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectDayOfThisWeek
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectDB" id="selectDB"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectDB</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1065">1065</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting data pulled from database information</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectDB
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$column</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span> = <span class="var-default">false</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: Table name to pull from</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$column</span><span class="var-description">: Column name to pull from</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Options to apply to that field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectDBSimple" id="selectDBSimple"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectDBSimple</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1135">1135</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting data pulled from a simple database query</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectDBSimple
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$id_column</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name_column</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span> = <span class="var-default">false</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: Table name to pull from</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id_column</span><span class="var-description">: ID Column name to pull from</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name_column</span><span class="var-description">: Name Column name to pull from</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Options to apply to that field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectHour" id="selectHour"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectHour</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a750">750</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting a hour</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectHour
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectKeysOnly" id="selectKeysOnly"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectKeysOnly</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a978">978</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting data pulled from data given to function</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectKeysOnly
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: single dimensional key=&gt;value, data to be placed in drop box</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectMinute" id="selectMinute"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectMinute</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a767">767</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting a minute</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectMinute
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectMonth" id="selectMonth"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectMonth</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a676">676</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting a month</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectMonth
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectPercentage" id="selectPercentage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectPercentage</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a662">662</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting a month</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectPercentage
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectQuery" id="selectQuery"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectQuery</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1189">1189</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting data pulled from a simple database query</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectQuery
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$is_nullable</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>], <span class="var-type">array</span>&nbsp;<span class="var-name">6</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">7</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">6</span><span class="var-description">: Options to apply to that field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">7</span><span class="var-description">: Tabindex for input</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: Table name to pull from</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: ID Column name to pull from</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Name Column name to pull from</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$options</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Whether field is nullable</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectSecond" id="selectSecond"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectSecond</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a784">784</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting a second</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectSecond
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectTimezone" id="selectTimezone"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectTimezone</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a867">867</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting a timezone</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectTimezone
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectWeeklyInterval" id="selectWeeklyInterval"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectWeeklyInterval</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a851">851</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting an interval from 1 Week to 4 Weeks</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectWeeklyInterval
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectYear" id="selectYear"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectYear</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a712">712</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting a year</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectYear
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$min</span> = <span class="var-default">1900</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span> = <span class="var-default">2099</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$min</span><span class="var-description">: Minimum Value</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max</span><span class="var-description">: Maximum Value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectYesNo" id="selectYesNo"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">selectYesNo</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a951">951</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Makes a drop box for selecting a Yes or No for boolean data</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for inputting the data</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			selectYesNo
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$is_nullable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$current_value</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tabindex</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$is_nullable</span><span class="var-description">: Whether field is nullable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$current_value</span><span class="var-description">: Current value of field</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tabindex</span><span class="var-description">: Tabindex for input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateByName" id="validateByName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateByName</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a190">190</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns any error message if applicable from running  validation code generated by getEditByName</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Error message from validating</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			validateByName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of Column to validate</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Options to be passed along to getEditByName</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateCharacterSet" id="validateCharacterSet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateCharacterSet</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1236">1236</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input against a set of valid characters</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if valid</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			validateCharacterSet
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$character_set</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: Value to test</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$character_set</span><span class="var-description">: Set of valid characters</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateCircle" id="validateCircle"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateCircle</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1487">1487</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for being a valid circle data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Error message</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			validateCircle
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of $_POST to test</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateDate" id="validateDate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateDate</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1507">1507</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for being a valid circle data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Error message</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			validateDate
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of $_POST to test</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$count</span><span class="var-description">: How many boxes the date is spread across</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateDigits" id="validateDigits"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateDigits</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1224">1224</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for all numeric data</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if valid</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			validateDigits
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: Value to test</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateEmail" id="validateEmail"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateEmail</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1374">1374</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for being a valid email address by both pattern  matching and validating the dns of the server</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Error message</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			validateEmail
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of $_POST to test</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateEmpty" id="validateEmpty"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateEmpty</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1358">1358</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for not being empty</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Error message</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			validateEmpty
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of $_POST to test</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateFile" id="validateFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateFile</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1596">1596</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for being a file upload</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Error message</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			validateFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of $_FILES to test</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateHex" id="validateHex"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateHex</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1312">1312</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for being a valid hex number</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if valid</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			validateHex
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: Value to test</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateInet" id="validateInet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateInet</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1542">1542</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for being a valid inet data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Error message</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			validateInet
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of $_POST to test</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateLength" id="validateLength"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateLength</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1341">1341</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for corrent length</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Error message</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			validateLength
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$min</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of $_POST to test</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$min</span><span class="var-description">: Minimum length for value</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max</span><span class="var-description">: Maximum length for value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateMacaddr" id="validateMacaddr"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateMacaddr</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1571">1571</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for being a valid macaddr data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Error message</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			validateMacaddr
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of $_POST to test</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateMatching" id="validateMatching"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateMatching</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1324">1324</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for matching data</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Error message</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			validateMatching
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name1</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name2</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name1</span><span class="var-description">: Field of $_POST to test</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name2</span><span class="var-description">: Field of $_POST to compare to</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateMaximumLength" id="validateMaximumLength"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateMaximumLength</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1292">1292</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for maximum acceptable length</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if valid</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			validateMaximumLength
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: Value to test</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max</span><span class="var-description">: Maximum length for value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateMinimumLength" id="validateMinimumLength"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateMinimumLength</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1271">1271</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for minimum acceptable length</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if valid</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			validateMinimumLength
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$min</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: Value to test</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$min</span><span class="var-description">: Minimum length for value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateNumber" id="validateNumber"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateNumber</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1404">1404</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for being a valid number and within given range</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Error message</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			validateNumber
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$min</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of $_POST to test</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$min</span><span class="var-description">: Minimal acceptable value</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max</span><span class="var-description">: Maximum acceptable value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateNumeric" id="validateNumeric"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateNumeric</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1423">1423</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for being a valid numeric data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Error message</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			validateNumeric
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$whole_max</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$decimal_max</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of $_POST to test</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$whole_max</span><span class="var-description">: Maximum acceptable length for whole part</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$decimal_max</span><span class="var-description">: Maximum acceptable length for decimal part</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidatePoint" id="validatePoint"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validatePoint</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1470">1470</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for being a valid point data type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Error message</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			validatePoint
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of $_POST to test</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateRange" id="validateRange"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateRange</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1255">1255</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for number being in acceptable range</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if valid</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			validateRange
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$min</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$value</span><span class="var-description">: Value to test</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$min</span><span class="var-description">: Minimum acceptable value</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max</span><span class="var-description">: Maximum acceptable value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateReal" id="validateReal"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateReal</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataInput.php.html#a1449">1449</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate input for being a valid real data type</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			validateReal
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$precision</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Field of $_POST to test</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$precision</span><span class="var-description">: Number of digits valid for the significant part</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max</span><span class="var-description">: Maximum allowable exponent value</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 01 Jan 2008 00:06:49 -0800 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for imgdata_squares.inc,v</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file imgdata_squares.inc,v</h1>
+<p>Documentation is available at <a href="../default/_addons---jpgraph---imgdata_squares.inc,v.html">imgdata_squares.inc,v</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-comm">//=======================================================================</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-comm">//&nbsp;File:&nbsp;&nbsp;&nbsp;&nbsp;IMGDATA_SQUARES.INC</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-comm">//&nbsp;Description:&nbsp;&nbsp;&nbsp;&nbsp;Base64&nbsp;encoded&nbsp;images&nbsp;for&nbsp;squares</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-comm">//&nbsp;Created:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2003-03-20</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-comm">//&nbsp;Author:&nbsp;&nbsp;&nbsp;&nbsp;Johan&nbsp;Persson&nbsp;(johanp@aditus.nu)</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-comm">//&nbsp;Ver:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$Id:&nbsp;imgdata_squares.inc,v&nbsp;1.1&nbsp;2003/03/23&nbsp;13:37:37&nbsp;aditus&nbsp;Exp&nbsp;$</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-comm">//</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-comm">//&nbsp;License:&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;code&nbsp;is&nbsp;released&nbsp;under&nbsp;QPL&nbsp;1.0&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-comm">//&nbsp;Copyright&nbsp;(C)&nbsp;2003&nbsp;Johan&nbsp;Persson&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-comm">//========================================================================</span></div></li>
+<li><div class="src-line"><a name="a12"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-key">class&nbsp;</span><a href="../default/ImgData_Squares.html">ImgData_Squares</a>&nbsp;<span class="src-key">extends&nbsp;</span><a href="../default/ImgData.html">ImgData</a>&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a14"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Squares.html#var$name">$name</a>&nbsp;=&nbsp;<span class="src-str">'Squares'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a15"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Squares.html#var$an">$an</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-id">MARK_IMG_SQUARE&nbsp;</span>=&gt;<span class="src-str">'imgdata'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a16"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a17"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Squares.html#var$colors">$colors</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'bluegreen'</span><span class="src-sym">,</span><span class="src-str">'blue'</span><span class="src-sym">,</span><span class="src-str">'green'</span><span class="src-sym">,&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'lightblue'</span><span class="src-sym">,</span><span class="src-str">'orange'</span><span class="src-sym">,</span><span class="src-str">'purple'</span><span class="src-sym">,</span><span class="src-str">'red'</span><span class="src-sym">,</span><span class="src-str">'yellow'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a19"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Squares.html#var$index">$index</a>&nbsp;&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'bluegreen'&nbsp;</span>=&gt;<span class="src-num">2</span><span class="src-sym">,</span><span class="src-str">'blue'</span>=&gt;<span class="src-num">5</span><span class="src-sym">,</span><span class="src-str">'green'</span>=&gt;<span class="src-num">6</span><span class="src-sym">,&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a20"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'lightblue'</span>=&gt;<span class="src-num">0</span><span class="src-sym">,</span><span class="src-str">'orange'</span>=&gt;<span class="src-num">7</span><span class="src-sym">,</span><span class="src-str">'purple'</span>=&gt;<span class="src-num">4</span><span class="src-sym">,</span><span class="src-str">'red'</span>=&gt;<span class="src-num">3</span><span class="src-sym">,</span><span class="src-str">'yellow'</span>=&gt;<span class="src-num">1</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a21"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Squares.html#var$maxidx">$maxidx</a>&nbsp;=&nbsp;<span class="src-num">7&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Squares.html#var$imgdata">$imgdata</a>&nbsp;<span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a23"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../default/ImgData_Squares.html#methodImgData_Squares">ImgData_Squares</a>&nbsp;<span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-comm">//sq_lblue.png</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">362&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAIAAADZrBkAAAAABm'</span>.</div></li>
+<li><div class="src-line"><a name="a31"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'JLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsRAAALEQF/ZF+RAAAA'</span>.</div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'B3RJTUUH0wMLFgojiPx/ygAAAPdJREFUeNpj/P377+kzHx89/c'</span>.</div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'VAHNBQ5VBX52HavPWWjg6nnDQbkXoUFTnnL7zD9PPXrz17HxCj'</span>.</div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'E6Jn6fL7H7/+ZWJgYCBGJ7IeBgYGJogofp1oehDa8OjE1IOiDa'</span>.</div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'tOrHoYGBhY0NwD0enirMDAwMDFxYRVD7ptyDrNTAU0NXix6sGu'</span>.</div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'jYGBgZOT9e/f/0xMjFyczFgVsGAKCfBza2kKzpl3hIuT1c9Xb/'</span>.</div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'PW58/foKchJqx6tmy98vbjj8cvPm/afMnXW1JShA2fNmQ9EBFc'</span>.</div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'Opnw6MGjkwm/Hlw6mQjqwaqTiRg9mDoZv//4M2/+UYJ64EBWgj'</span>.</div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'cm2hwA8l24oNDl+DMAAAAASUVORK5CYII='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-comm">//sq_yellow.png</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">338&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAWl'</span>.</div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX////+/+H+/9/9/9v8/8P8/8H8/7v8/7n6/4P5/335/3n5'</span>.</div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'/3X4/1f4/1P3/031/w30/wn0/wPt+ADp9ADm8ADk7gDc5gDa5A'</span>.</div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'DL1ADFzgCwuACqsgClrABzeAC9M0MzAAAAAWJLR0QAiAUdSAAA'</span>.</div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9MDCxYEDlOgDj'</span>.</div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'EAAAB+SURBVHjaVcpbCsQgDEDRGERGKopjDa2a/W9zfLWj9/Nw'</span>.</div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'Ac21ZRBOtZlRN9ApzSYFaDUj79KIorRDbJNO9bN/GUSh2ZRJFJ'</span>.</div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'S18iorURBiyksO8buT0zkfYaUqzI91ckfhWhoGXTLzsDjI68Sz'</span>.</div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'pGMjrzPzauA/iXk1AtykmvgBC8UcWUdc9HkAAAAASUVORK5CYI'</span>.</div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'I='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a57"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a58"></a><span class="src-comm">//sq_blgr.png</span></div></li>
+<li><div class="src-line"><a name="a59"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">347&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAZl'</span>.</div></li>
+<li><div class="src-line"><a name="a63"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX////0+vv0+vrz+fry+frv+Png7e/d7e/a6+zY6+250tSz'</span>.</div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'0tSyztCtztGM0NWIz9SDzdNfsLVcrrRZrbJOp61MpqtIr7dHn6'</span>.</div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'RErrZArLQ6q7M2g4kygYcsp68npa4ctr8QZ20JnqepKsl4AAAA'</span>.</div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU'</span>.</div></li>
+<li><div class="src-line"><a name="a67"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'1FB9MDCxYEByp8tpUAAAB7SURBVHjaVcjRFoIgDADQWZpWJpjY'</span>.</div></li>
+<li><div class="src-line"><a name="a68"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'MsnG//9kzIFn3McLzfArDA3MndFjrhvgfDHFBEB9pt0CVzwrY3'</span>.</div></li>
+<li><div class="src-line"><a name="a69"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'n2yicjhY4vTSp0nbXtN+hCV53SHDWe61dZY+/9463r2XuifHAM'</span>.</div></li>
+<li><div class="src-line"><a name="a70"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'0SoH+6xEcovUlCfefeFSIwfTTQ3fB+pi4lV/bTIgvmaA7a0AAA'</span>.</div></li>
+<li><div class="src-line"><a name="a71"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AASUVORK5CYII='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a72"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a73"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a74"></a><span class="src-comm">//sq_red.png</span></div></li>
+<li><div class="src-line"><a name="a75"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a76"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">324&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a77"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a78"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAXV'</span>.</div></li>
+<li><div class="src-line"><a name="a79"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX////++Pn99/j99ff99fb98/X98/T98PL55uj43+P24+bw'</span>.</div></li>
+<li><div class="src-line"><a name="a80"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'kKPvjaHviJ3teJHpxMnoL2Pjs73WW3rWNljVWXnUVnbUK1DTJk'</span>.</div></li>
+<li><div class="src-line"><a name="a81"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'3SUHPOBz/KQmmxPVmuOFasNFOeIkWVka/fAAAAAWJLR0QAiAUd'</span>.</div></li>
+<li><div class="src-line"><a name="a82"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'SAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9MDCxYEHd'</span>.</div></li>
+<li><div class="src-line"><a name="a83"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'ceT+8AAABtSURBVHjaVchbAkMwEAXQq6i3VrQiQfa/zDYTw8z5'</span>.</div></li>
+<li><div class="src-line"><a name="a84"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'PCjGt9JVWFt1XWPh1fWNdfDy+tq6WPfRUPENNKnSnXNWPB4uv2'</span>.</div></li>
+<li><div class="src-line"><a name="a85"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'b54nSZ8jHrMtOxvWZZZtpD4KP6xLkO9/AhzhaCOMhJh68cOjzV'</span>.</div></li>
+<li><div class="src-line"><a name="a86"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'/K/4Ac2cG+nBcaRuAAAAAElFTkSuQmCC'&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a87"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a88"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a89"></a><span class="src-comm">//sq_pink.png</span></div></li>
+<li><div class="src-line"><a name="a90"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a91"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">445&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a92"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a93"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAApV'</span>.</div></li>
+<li><div class="src-line"><a name="a94"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX////6+Pz69/v49Pr38/r17/jr4+/l3Onj2efh1ua/L+i+'</span>.</div></li>
+<li><div class="src-line"><a name="a95"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'q8m+Lue9Lua8qsS8LuW8LeS7pca5LOG4LN+2Y9O2YNW1ZdO1Kt'</span>.</div></li>
+<li><div class="src-line"><a name="a96"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'y0atC0aNGzb82zbc6zKtuzKdqycsuwa8qtJtOISZ2GRpuFN6GE'</span>.</div></li>
+<li><div class="src-line"><a name="a97"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'NqCDQpmCMZ+BPpd/LJ1/K519S5B9Jpx9Jpt9JZt6RY11BJZ1BJ'</span>.</div></li>
+<li><div class="src-line"><a name="a98"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'V0BJV0BJRzBJNvNoRtIoJUEmdZ/XbrAAAAAWJLR0QAiAUdSAAA'</span>.</div></li>
+<li><div class="src-line"><a name="a99"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9MDCxYDF3iKMD'</span>.</div></li>
+<li><div class="src-line"><a name="a100"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'YAAACeSURBVHjaVczbEoIgGARgCiMtrexoWpaa2FHUgvd/tH4Y'</span>.</div></li>
+<li><div class="src-line"><a name="a101"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BnEvv9ldhNPradPnnGBUTtPDzMRPSIF46SaBoR25dYjz3I20Lb'</span>.</div></li>
+<li><div class="src-line"><a name="a102"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'ek6BgQz73Il7KKpSgCO0pTHU0886J1sCe0ZYbALjGhjFnEM2es'</span>.</div></li>
+<li><div class="src-line"><a name="a103"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'VhZVI4d+B1QtfnV47ywCEaKeP/p7JdLejSYt0j6NIiOq1wJZIs'</span>.</div></li>
+<li><div class="src-line"><a name="a104"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'QTDA0ELHwhPBCwyR/Cni9cOmzJtwAAAABJRU5ErkJggg=='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a105"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a106"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a107"></a><span class="src-comm">//sq_blue.png</span></div></li>
+<li><div class="src-line"><a name="a108"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a109"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">5</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">283&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a110"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">5</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a111"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAQl'</span>.</div></li>
+<li><div class="src-line"><a name="a112"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX////4+fz39/z19vvy8vru7/ni4+7g4fHW1ue8vteXmt6B'</span>.</div></li>
+<li><div class="src-line"><a name="a113"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'hdhiZ7FQVaZETcxCSJo1Oq4zNoMjKakhJHcKFaMEC2jRVYdWAA'</span>.</div></li>
+<li><div class="src-line"><a name="a114"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0'</span>.</div></li>
+<li><div class="src-line"><a name="a115"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'SU1FB9MDCxYDN0PkEP4AAABfSURBVHjaVchHAoAgDATAVcCCIF'</span>.</div></li>
+<li><div class="src-line"><a name="a116"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'j4/1elJEjmOFDHKVgDv4iz640gLs+LMF6ZUv/VqcXXplU7Gqpy'</span>.</div></li>
+<li><div class="src-line"><a name="a117"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'PFzBT5qml9NzlOX259riWHlS4kOffviHD8PQYZx2EFMPRkw+9Q'</span>.</div></li>
+<li><div class="src-line"><a name="a118"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'FSnRPeWEDzKAAAAABJRU5ErkJggg=='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a119"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a120"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a121"></a><span class="src-comm">//sq_green.png</span></div></li>
+<li><div class="src-line"><a name="a122"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a123"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">6</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">325&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a124"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">6</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a125"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAXV'</span>.</div></li>
+<li><div class="src-line"><a name="a126"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX////2+vX1+vX1+fT0+fPz+PPx9/Dv9u7u9e3h7uHe697a'</span>.</div></li>
+<li><div class="src-line"><a name="a127"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'6dnO2s3I1sa10LOvza2ay5aEwYBWlE9TqE5Tkk1RkEpMrUJMg0'</span>.</div></li>
+<li><div class="src-line"><a name="a128"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'hKiUNGpEFBojw8oTcsbScaYBMWlwmMT0NtAAAAAWJLR0QAiAUd'</span>.</div></li>
+<li><div class="src-line"><a name="a129"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'SAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9MDCxYEFd'</span>.</div></li>
+<li><div class="src-line"><a name="a130"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'nFx90AAABuSURBVHjaVc9HAoAgDADB2HuJWLDx/2cKBITscW4L'</span>.</div></li>
+<li><div class="src-line"><a name="a131"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'5byzMIWtZobNDZIZtrcCGZsRQ8GwvRSRNxIiMuysODKG3alikl'</span>.</div></li>
+<li><div class="src-line"><a name="a132"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'ueOPlpKTLBaRmOZxQxaXlfb5ZWI9om4WntrXiDSJzp7SBkwMQa'</span>.</div></li>
+<li><div class="src-line"><a name="a133"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'FEy0VR/NAB2kNuj7rgAAAABJRU5ErkJggg=='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a134"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a135"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a136"></a><span class="src-comm">//sq_orange.png</span></div></li>
+<li><div class="src-line"><a name="a137"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a138"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">7</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">321&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a139"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Squares.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">7</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a140"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAUV'</span>.</div></li>
+<li><div class="src-line"><a name="a141"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX/////8+n/8uf/8OP/59H/5Mv/zqH/zJ3/ypv/yJf/vYH/'</span>.</div></li>
+<li><div class="src-line"><a name="a142"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'u33/uXn/n0n/nUX/m0H/lzn/ljf/lDP/kS3/kCv/iR//hxv/fg'</span>.</div></li>
+<li><div class="src-line"><a name="a143"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'n/fAX/eQDYZgDW6ia5AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAL'</span>.</div></li>
+<li><div class="src-line"><a name="a144"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'EgAACxIB0t1+/AAAAAd0SU1FB9MDCxYEJIgbx+cAAAB2SURBVH'</span>.</div></li>
+<li><div class="src-line"><a name="a145"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'jaVczRCoQwDETRbLAWLZSGUA35/w/dVI0283i4DODew3YESmWW'</span>.</div></li>
+<li><div class="src-line"><a name="a146"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'kg5gWkoQAe6TleUQI/66Sy7i56+kLk7cht2N0+hcnJgQu0SqiC'</span>.</div></li>
+<li><div class="src-line"><a name="a147"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'1SzSIbzWSi6gavqJ63wSduRi2f+kwyD5rEukwCdZ1kGAMGMfv9'</span>.</div></li>
+<li><div class="src-line"><a name="a148"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AbWuGMOr5COSAAAAAElFTkSuQmCC'&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a149"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a150"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a151"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a152"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 25 Apr 2007 00:10:42 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</body>
+</html>

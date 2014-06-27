@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for mail_log_list.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file mail_log_list.php</h1>
+<p>Documentation is available at <a href="../phpBaseClasses/_htdocs_includes---administration---mail_logs---mail_log_list.php.html">mail_log_list.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-comm">&nbsp;*&nbsp;$RCSfile</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-comm">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-comm">&nbsp;*&nbsp;phpBaseClasses&nbsp;-&nbsp;Foundation&nbsp;for&nbsp;any&nbsp;application&nbsp;in&nbsp;php</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-comm">&nbsp;*&nbsp;Copyright&nbsp;(C)&nbsp;2002-2003&nbsp;Russell&nbsp;Chadwick</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-comm">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-comm">&nbsp;*&nbsp;This&nbsp;program&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-comm">&nbsp;*&nbsp;it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-comm">&nbsp;*&nbsp;the&nbsp;Free&nbsp;Software&nbsp;Foundation;&nbsp;either&nbsp;version&nbsp;2&nbsp;of&nbsp;the&nbsp;License,&nbsp;or&nbsp;(at</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-comm">&nbsp;*&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-comm">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-comm">&nbsp;*&nbsp;This&nbsp;program&nbsp;is&nbsp;distributed&nbsp;in&nbsp;the&nbsp;hope&nbsp;that&nbsp;it&nbsp;will&nbsp;be&nbsp;useful,&nbsp;but</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-comm">&nbsp;*&nbsp;WITHOUT&nbsp;ANY&nbsp;WARRANTY;&nbsp;without&nbsp;even&nbsp;the&nbsp;implied&nbsp;warranty&nbsp;of</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-comm">&nbsp;*&nbsp;MERCHANTABILITY&nbsp;or&nbsp;FITNESS&nbsp;FOR&nbsp;A&nbsp;PARTICULAR&nbsp;PURPOSE.&nbsp;&nbsp;See&nbsp;the&nbsp;GNU</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-comm">&nbsp;*&nbsp;General&nbsp;Public&nbsp;License&nbsp;for&nbsp;more&nbsp;details.</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-comm">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-comm">&nbsp;*&nbsp;You&nbsp;should&nbsp;have&nbsp;received&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-comm">&nbsp;*&nbsp;along&nbsp;with&nbsp;this&nbsp;program;&nbsp;if&nbsp;not,&nbsp;write&nbsp;to&nbsp;the&nbsp;Free&nbsp;Software</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-comm">&nbsp;*&nbsp;Foundation,&nbsp;Inc.,&nbsp;59&nbsp;Temple&nbsp;Place&nbsp;-&nbsp;Suite&nbsp;330,&nbsp;Boston,&nbsp;MA&nbsp;&nbsp;02111-1307,&nbsp;USA.</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-comm">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@version</span><span class="src-doc">&nbsp;$Revision:&nbsp;1.7&nbsp;$&nbsp;$Date:&nbsp;2004/02/19&nbsp;23:28:38&nbsp;$</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;phpBaseClasses</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@link</span><span class="src-doc">&nbsp;http://www.toolshed51.com/</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;2002-2003&nbsp;Russell&nbsp;Chadwick</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Russell&nbsp;Chadwick&nbsp;&lt;toolshed@toolshed51.com&gt;</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a31"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$DEBUG&nbsp;</span>=&nbsp;<span class="src-num">1</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-inc">include&nbsp;</span><span class="src-str">'begin.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$display</span><span class="src-sym">-&gt;</span><span class="src-id">head&nbsp;</span><span class="src-sym">(</span><span class="src-str">'Administration&nbsp;--&nbsp;Mail&nbsp;--&nbsp;Mail&nbsp;Log&nbsp;List'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-id">menu&nbsp;</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-var">$security</span><span class="src-sym">-&gt;</span><span class="src-id">checkPermissions&nbsp;</span><span class="src-sym">(</span><span class="src-str">'Admin'</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">die&nbsp;</span><span class="src-sym">(</span><span class="src-str">'You&nbsp;must&nbsp;be&nbsp;Admin&nbsp;to&nbsp;access&nbsp;this&nbsp;page'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$select_query&nbsp;</span>=&nbsp;<span class="src-str">&quot;SELECT&nbsp;u.username,&nbsp;u.first_name||'&nbsp;'||u.last_name&nbsp;AS&nbsp;full_name,&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ml.when_mailed,&nbsp;ml.template</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FROM&nbsp;security.mail_logs&nbsp;ml,&nbsp;security.users&nbsp;u&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WHERE&nbsp;ml.user_id&nbsp;=&nbsp;u.user_id&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">((</span>isset<span class="src-sym">(</span><span class="src-var">$_GET</span><span class="src-sym">[</span><span class="src-str">'user_id'</span><span class="src-sym">]</span><span class="src-sym">))&nbsp;</span>&amp;&amp;&nbsp;<span class="src-sym">(</span><span class="src-sym">!</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$_GET</span><span class="src-sym">[</span><span class="src-str">'user_id'</span><span class="src-sym">]</span><span class="src-sym">)))&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$select_query&nbsp;</span>.=&nbsp;<span class="src-str">&quot;</span></div></li>
+<li><div class="src-line"><a name="a47"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND&nbsp;ml.user_id&nbsp;=&nbsp;&quot;&nbsp;</span>.&nbsp;<span class="src-var">$_GET</span><span class="src-sym">[</span><span class="src-str">'user_id'</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$select_query&nbsp;</span>.=&nbsp;<span class="src-str">&quot;</span></div></li>
+<li><div class="src-line"><a name="a51"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ORDER&nbsp;BY&nbsp;ml.when_mailed&nbsp;DESC&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$mail_log_count&nbsp;</span>=&nbsp;<span class="src-var">$db</span><span class="src-sym">-&gt;</span><span class="src-id">doQuery&nbsp;</span><span class="src-sym">(</span><span class="src-var">$select_query</span><span class="src-sym">,&nbsp;</span><span class="src-var">$mails</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">'</span></div></li>
+<li><div class="src-line"><a name="a56"></a><span class="src-str">&lt;br&gt;</span></div></li>
+<li><div class="src-line"><a name="a57"></a><span class="src-str">&lt;center&gt;</span></div></li>
+<li><div class="src-line"><a name="a58"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;large_bold_black&quot;&gt;Mail&nbsp;Log&nbsp;List&lt;/span&gt;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a59"></a><span class="src-str">&lt;/center&gt;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">'</span></div></li>
+<li><div class="src-line"><a name="a62"></a><span class="src-str">&lt;br&gt;</span></div></li>
+<li><div class="src-line"><a name="a63"></a><span class="src-str">&lt;form&nbsp;method=&quot;get&quot;&nbsp;action=&quot;'&nbsp;</span>.&nbsp;<span class="src-var">$_SERVER</span><span class="src-sym">[</span><span class="src-str">'PHP_SELF'</span><span class="src-sym">]&nbsp;</span>.&nbsp;<span class="src-str">'&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a64"></a><span class="src-str">&lt;center&gt;</span></div></li>
+<li><div class="src-line"><a name="a65"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;Filter&nbsp;by&nbsp;User:&nbsp;'&nbsp;</span>.&nbsp;<span class="src-var">$datainput</span><span class="src-sym">-&gt;</span><span class="src-id">selectDB&nbsp;</span><span class="src-sym">(</span><span class="src-str">'user_id'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$_GET</span><span class="src-sym">[</span><span class="src-str">'user_id'</span><span class="src-sym">]</span><span class="src-sym">,&nbsp;</span><span class="src-str">'security.users'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'user_id'</span><span class="src-sym">,&nbsp;</span><span class="src-id">true</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'</span></div></li>
+<li><div class="src-line"><a name="a66"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;submit&quot;&nbsp;name=&quot;submit&quot;&nbsp;value=&quot;Filter&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a67"></a><span class="src-str">&lt;/center&gt;</span></div></li>
+<li><div class="src-line"><a name="a68"></a><span class="src-str">&lt;/form&gt;</span></div></li>
+<li><div class="src-line"><a name="a69"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a70"></a><span class="src-str">&lt;table&nbsp;width=&quot;80%&quot;&nbsp;align=&quot;center&quot;&nbsp;cellpadding=&quot;2&quot;&nbsp;cellspacing=&quot;2&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a71"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&nbsp;class=&quot;table_header&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a72"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;colspan=&quot;4&quot;&nbsp;class=&quot;medium_bold_black&quot;&nbsp;align=&quot;center&quot;&gt;Sorted&nbsp;by&nbsp;When&nbsp;Mailed,&nbsp;Most&nbsp;recent&nbsp;First&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a73"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span></div></li>
+<li><div class="src-line"><a name="a74"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&nbsp;class=&quot;table_header&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a75"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;User&nbsp;Mailed&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a76"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;When&nbsp;Mailed&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a77"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;What&nbsp;Mailed&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a78"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a79"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a80"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">for&nbsp;</span><span class="src-sym">(</span><span class="src-var">$index&nbsp;</span>=&nbsp;<span class="src-num">1</span><span class="src-sym">;&nbsp;</span><span class="src-var">$index&nbsp;</span>&lt;=&nbsp;<span class="src-var">$mail_log_count</span><span class="src-sym">;&nbsp;</span><span class="src-var">$index</span>++<span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a81"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">'</span></div></li>
+<li><div class="src-line"><a name="a82"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&nbsp;class=&quot;table_'</span><span class="src-sym">,&nbsp;</span><span class="src-sym">(</span><span class="src-var">$index&nbsp;</span>%&nbsp;<span class="src-num">2&nbsp;</span>==&nbsp;<span class="src-num">0</span><span class="src-sym">)&nbsp;</span>?&nbsp;<span class="src-str">'even'&nbsp;</span>:&nbsp;<span class="src-str">'odd'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'_row&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a83"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;'&nbsp;</span>.&nbsp;<span class="src-var">$mails</span><span class="src-sym">[</span><span class="src-var">$index</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'username'</span><span class="src-sym">]&nbsp;</span>.&nbsp;<span class="src-str">'&nbsp;('&nbsp;</span>.&nbsp;<span class="src-var">$mails</span><span class="src-sym">[</span><span class="src-var">$index</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'full_name'</span><span class="src-sym">]&nbsp;</span>.&nbsp;<span class="src-str">')&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a84"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;'&nbsp;</span>.&nbsp;<span class="src-var">$mails</span><span class="src-sym">[</span><span class="src-var">$index</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'when_mailed'</span><span class="src-sym">]&nbsp;</span>.&nbsp;<span class="src-str">'&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a85"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;'&nbsp;</span>.&nbsp;<span class="src-var">$mails</span><span class="src-sym">[</span><span class="src-var">$index</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'template'</span><span class="src-sym">]&nbsp;</span>.&nbsp;<span class="src-str">'&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a86"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a87"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a88"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a89"></a>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">'</span></div></li>
+<li><div class="src-line"><a name="a90"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&nbsp;class=&quot;table_header&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a91"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;colspan=&quot;4&quot;&gt;&amp;nbsp;&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a92"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span></div></li>
+<li><div class="src-line"><a name="a93"></a><span class="src-str">&lt;/table&gt;</span></div></li>
+<li><div class="src-line"><a name="a94"></a><span class="src-str">'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a95"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a96"></a>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-id">menu_end&nbsp;</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a97"></a>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$display</span><span class="src-sym">-&gt;</span><span class="src-id">foot&nbsp;</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a98"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-inc">include&nbsp;</span><span class="src-str">'end.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a99"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 01 Jan 2008 00:07:43 -0800 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</body>
+</html>

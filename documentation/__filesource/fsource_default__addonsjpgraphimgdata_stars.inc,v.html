@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for imgdata_stars.inc,v</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file imgdata_stars.inc,v</h1>
+<p>Documentation is available at <a href="../default/_addons---jpgraph---imgdata_stars.inc,v.html">imgdata_stars.inc,v</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-comm">//=======================================================================</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-comm">//&nbsp;File:&nbsp;&nbsp;&nbsp;&nbsp;IMGDATA_STARS.INC</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-comm">//&nbsp;Description:&nbsp;&nbsp;&nbsp;&nbsp;Base64&nbsp;encoded&nbsp;images&nbsp;for&nbsp;stars</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-comm">//&nbsp;Created:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2003-03-20</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-comm">//&nbsp;Author:&nbsp;&nbsp;&nbsp;&nbsp;Johan&nbsp;Persson&nbsp;(johanp@aditus.nu)</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-comm">//&nbsp;Ver:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$Id:&nbsp;imgdata_stars.inc,v&nbsp;1.1&nbsp;2003/03/23&nbsp;13:37:37&nbsp;aditus&nbsp;Exp&nbsp;$</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-comm">//</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-comm">//&nbsp;License:&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;code&nbsp;is&nbsp;released&nbsp;under&nbsp;QPL&nbsp;1.0&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-comm">//&nbsp;Copyright&nbsp;(C)&nbsp;2003&nbsp;Johan&nbsp;Persson&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-comm">//========================================================================</span></div></li>
+<li><div class="src-line"><a name="a12"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a13"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-key">class&nbsp;</span><a href="../default/ImgData_Stars.html">ImgData_Stars</a>&nbsp;<span class="src-key">extends&nbsp;</span><a href="../default/ImgData.html">ImgData</a>&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a15"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Stars.html#var$name">$name</a>&nbsp;=&nbsp;<span class="src-str">'Stars'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a16"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Stars.html#var$an">$an</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-id">MARK_IMG_STAR&nbsp;</span>=&gt;&nbsp;<span class="src-str">'imgdata'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a17"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Stars.html#var$colors">$colors</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'bluegreen'</span><span class="src-sym">,</span><span class="src-str">'lightblue'</span><span class="src-sym">,</span><span class="src-str">'purple'</span><span class="src-sym">,</span><span class="src-str">'blue'</span><span class="src-sym">,</span><span class="src-str">'green'</span><span class="src-sym">,</span><span class="src-str">'pink'</span><span class="src-sym">,</span><span class="src-str">'red'</span><span class="src-sym">,</span><span class="src-str">'yellow'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a19"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Stars.html#var$index">$index</a>&nbsp;&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'bluegreen'</span>=&gt;<span class="src-num">3</span><span class="src-sym">,</span><span class="src-str">'lightblue'</span>=&gt;<span class="src-num">4</span><span class="src-sym">,</span><span class="src-str">'purple'</span>=&gt;<span class="src-num">1</span><span class="src-sym">,&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a20"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'blue'</span>=&gt;<span class="src-num">5</span><span class="src-sym">,</span><span class="src-str">'green'</span>=&gt;<span class="src-num">0</span><span class="src-sym">,</span><span class="src-str">'pink'</span>=&gt;<span class="src-num">7</span><span class="src-sym">,</span><span class="src-str">'red'</span>=&gt;<span class="src-num">2</span><span class="src-sym">,</span><span class="src-str">'yellow'</span>=&gt;<span class="src-num">6</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a21"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Stars.html#var$maxidx">$maxidx</a>&nbsp;=&nbsp;<span class="src-num">7&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Stars.html#var$imgdata">$imgdata</a>&nbsp;<span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a23"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../default/ImgData_Stars.html#methodImgData_Stars">ImgData_Stars</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-comm">//&nbsp;File:&nbsp;bstar_green_001.png</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">329&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAMAAABsDg4iAAAAUV'</span>.</div></li>
+<li><div class="src-line"><a name="a31"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX///////+/v7+83rqcyY2Q/4R7/15y/1tp/05p/0lg/zdX'</span>.</div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'/zdX/zVV/zdO/zFJ9TFJvDFD4yg+8Bw+3iU68hwurhYotxYosx'</span>.</div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'YokBoTfwANgQFUp7DWAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgF'</span>.</div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'HUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfTAxYTJj'</span>.</div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'CRyxgTAAAAcUlEQVR4nH3MSw6AIAwEUBL/IKBWwXL/g0pLojUS'</span>.</div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'ZzGLl8ko9Zumhr5iy66/GH0dp49llNPB5sTotDY5PVuLG6tnM9'</span>.</div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'CVKSIe1joSgPsAKSuANNaENFQvTAGzmheSkUpMBWeJZwqBT8wo'</span>.</div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'hmysD4bnnPsC/x8ItUdGPfAAAAAASUVORK5CYII='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-comm">//&nbsp;File:&nbsp;bstar_blred.png</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a42"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">325&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAMAAABsDg4iAAAATl'</span>.</div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX///+/v79uRJ6jWPOSUtKrb+ejWO+gWPaGTruJTr6rZvF2'</span>.</div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'RqC2ocqdVuCeV+egV/GsnLuIXL66rMSpcOyATbipY/OdWOp+VK'</span>.</div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'aTU9WhV+yJKBoLAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgA'</span>.</div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfTAxYTJwynv1'</span>.</div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'XVAAAAcElEQVR4nH3MyQ6AIAwEUFIqiwju2///qLQmWiJxDnN4'</span>.</div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'mYxSv5lqGCs2nvaLLtZx/VhGOW1MjnPJWp0zsw2wsUY2jd09BY'</span>.</div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'DFmESC+BwA5UCUxhqAhqrA4CGrLpCMVGK4sZe4B+/5RLdiyMb6'</span>.</div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'on/PuS9CdQNC7yBXEQAAAABJRU5ErkJggg=='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a54"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a55"></a><span class="src-comm">//&nbsp;File:&nbsp;bstar_red_001.png</span></div></li>
+<li><div class="src-line"><a name="a56"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">325&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a58"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a59"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAMAAABsDg4iAAAATl'</span>.</div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX///+/v7+eRFHzWG3SUmHnb37vWGr2WHG7Tlm+TljxZneg'</span>.</div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'Rk3KoaXgVmXnV2nxV227nJ++XGzErK3scIS4TVzzY3fqWG2mVF'</span>.</div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'zVU2PsV2rJFw9VAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgA'</span>.</div></li>
+<li><div class="src-line"><a name="a63"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfTAxYTJzCI0C'</span>.</div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'lSAAAAcElEQVR4nH3MyQ6AIAwEUFIqiwju2///qLQmWiJxDnN4'</span>.</div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'mYxSv5lqGCs2nvaLLtZx/VhGOW1MjnPJWp0zsw2wsUY2jd09BY'</span>.</div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'DFmESC+BwA5UCUxhqAhqrA4CGrLpCMVGK4sZe4B+/5RLdiyMb6'</span>.</div></li>
+<li><div class="src-line"><a name="a67"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'on/PuS9CdQNC7yBXEQAAAABJRU5ErkJggg=='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a68"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a69"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a70"></a><span class="src-comm">//&nbsp;File:&nbsp;bstar_blgr_001.png</span></div></li>
+<li><div class="src-line"><a name="a71"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a72"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">325&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a73"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a74"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAMAAABsDg4iAAAATl'</span>.</div></li>
+<li><div class="src-line"><a name="a75"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX///+/v79Ehp5Yx/NSq9Jvw+dYwu9YzfZOmbtOmb5myPFG'</span>.</div></li>
+<li><div class="src-line"><a name="a76"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'gqChvcpWteBXvedXxvGcsbtcpb6su8RwzOxNmrhjyvNYwupUjK'</span>.</div></li>
+<li><div class="src-line"><a name="a77"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'ZTr9VXwOyJhmWNAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgA'</span>.</div></li>
+<li><div class="src-line"><a name="a78"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfTAxYTJTC65k'</span>.</div></li>
+<li><div class="src-line"><a name="a79"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'vQAAAAcElEQVR4nH3MyQ6AIAwEUFIqiwju2///qLQmWiJxDnN4'</span>.</div></li>
+<li><div class="src-line"><a name="a80"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'mYxSv5lqGCs2nvaLLtZx/VhGOW1MjnPJWp0zsw2wsUY2jd09BY'</span>.</div></li>
+<li><div class="src-line"><a name="a81"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'DFmESC+BwA5UCUxhqAhqrA4CGrLpCMVGK4sZe4B+/5RLdiyMb6'</span>.</div></li>
+<li><div class="src-line"><a name="a82"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'on/PuS9CdQNC7yBXEQAAAABJRU5ErkJggg=='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a83"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a84"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a85"></a><span class="src-comm">//&nbsp;File:&nbsp;bstar_blgr_002.png</span></div></li>
+<li><div class="src-line"><a name="a86"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a87"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">325&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a88"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a89"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAMAAABsDg4iAAAATl'</span>.</div></li>
+<li><div class="src-line"><a name="a90"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX///+/v79EnpxY8/FS0dJv5+dY7+9Y9vBOubtOur5m8fFG'</span>.</div></li>
+<li><div class="src-line"><a name="a91"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'nKChycpW3uBX5+ZX8e2curtcvrqswsRw7OdNuLZj8/BY6udUpK'</span>.</div></li>
+<li><div class="src-line"><a name="a92"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'ZT1dRX7OtNkrW5AAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgA'</span>.</div></li>
+<li><div class="src-line"><a name="a93"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfTAxYTJgXHeN'</span>.</div></li>
+<li><div class="src-line"><a name="a94"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'wwAAAAcElEQVR4nH3MyQ6AIAwEUFIqiwju2///qLQmWiJxDnN4'</span>.</div></li>
+<li><div class="src-line"><a name="a95"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'mYxSv5lqGCs2nvaLLtZx/VhGOW1MjnPJWp0zsw2wsUY2jd09BY'</span>.</div></li>
+<li><div class="src-line"><a name="a96"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'DFmESC+BwA5UCUxhqAhqrA4CGrLpCMVGK4sZe4B+/5RLdiyMb6'</span>.</div></li>
+<li><div class="src-line"><a name="a97"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'on/PuS9CdQNC7yBXEQAAAABJRU5ErkJggg=='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a98"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a99"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a100"></a><span class="src-comm">//&nbsp;File:&nbsp;bstar_blue_001.png</span></div></li>
+<li><div class="src-line"><a name="a101"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a102"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">5</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">325&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a103"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">5</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a104"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAMAAABsDg4iAAAATl'</span>.</div></li>
+<li><div class="src-line"><a name="a105"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX///+/v79EY55Yi/NSetJvledYiO9YkPZOb7tObr5mkvFG'</span>.</div></li>
+<li><div class="src-line"><a name="a106"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'X6ChrcpWgOBXhedXi/Gcpbtcf76sssRwnOxNcbhjk/NYiepUbK'</span>.</div></li>
+<li><div class="src-line"><a name="a107"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'ZTfdVXh+ynNEzzAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgA'</span>.</div></li>
+<li><div class="src-line"><a name="a108"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfTAxYTJhStyP'</span>.</div></li>
+<li><div class="src-line"><a name="a109"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'zCAAAAcElEQVR4nH3MyQ6AIAwEUFIqiwju2///qLQmWiJxDnN4'</span>.</div></li>
+<li><div class="src-line"><a name="a110"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'mYxSv5lqGCs2nvaLLtZx/VhGOW1MjnPJWp0zsw2wsUY2jd09BY'</span>.</div></li>
+<li><div class="src-line"><a name="a111"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'DFmESC+BwA5UCUxhqAhqrA4CGrLpCMVGK4sZe4B+/5RLdiyMb6'</span>.</div></li>
+<li><div class="src-line"><a name="a112"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'on/PuS9CdQNC7yBXEQAAAABJRU5ErkJggg=='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a113"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a114"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a115"></a><span class="src-comm">//&nbsp;File:&nbsp;bstar_oy_007.png</span></div></li>
+<li><div class="src-line"><a name="a116"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a117"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">6</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">325&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a118"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">6</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a119"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAMAAABsDg4iAAAATl'</span>.</div></li>
+<li><div class="src-line"><a name="a120"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX///+/v7+ejUTz11jSvVLn02/v1lj21li7q06+r07x2mag'</span>.</div></li>
+<li><div class="src-line"><a name="a121"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'lUbKxKHgy1bnz1fx1Ve7t5y+qlzEwqzs03C4pE3z2WPqz1imml'</span>.</div></li>
+<li><div class="src-line"><a name="a122"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'TVv1Ps01dGRjeyAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgA'</span>.</div></li>
+<li><div class="src-line"><a name="a123"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfTAxYTJjsGGc'</span>.</div></li>
+<li><div class="src-line"><a name="a124"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'GbAAAAcElEQVR4nH3MyQ6AIAwEUFIqiwju2///qLQmWiJxDnN4'</span>.</div></li>
+<li><div class="src-line"><a name="a125"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'mYxSv5lqGCs2nvaLLtZx/VhGOW1MjnPJWp0zsw2wsUY2jd09BY'</span>.</div></li>
+<li><div class="src-line"><a name="a126"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'DFmESC+BwA5UCUxhqAhqrA4CGrLpCMVGK4sZe4B+/5RLdiyMb6'</span>.</div></li>
+<li><div class="src-line"><a name="a127"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'on/PuS9CdQNC7yBXEQAAAABJRU5ErkJggg=='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a128"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a129"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a130"></a><span class="src-comm">//&nbsp;File:&nbsp;bstar_lred.png</span></div></li>
+<li><div class="src-line"><a name="a131"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a132"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">7</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">325&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a133"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Stars.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">7</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a134"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAMAAABsDg4iAAAATl'</span>.</div></li>
+<li><div class="src-line"><a name="a135"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX///+/v7+eRJPzWN3SUr7nb9TvWNj2WOS7Tqi+TqnxZtyg'</span>.</div></li>
+<li><div class="src-line"><a name="a136"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'Ro/KocPgVsjnV9LxV927nLa+XLTErL7scN24TarzY9/qWNemVJ'</span>.</div></li>
+<li><div class="src-line"><a name="a137"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'jVU8LsV9VCwcc9AAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgA'</span>.</div></li>
+<li><div class="src-line"><a name="a138"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfTAxYTJxi9ZY'</span>.</div></li>
+<li><div class="src-line"><a name="a139"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'GoAAAAcElEQVR4nH3MyQ6AIAwEUFIqiwju2///qLQmWiJxDnN4'</span>.</div></li>
+<li><div class="src-line"><a name="a140"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'mYxSv5lqGCs2nvaLLtZx/VhGOW1MjnPJWp0zsw2wsUY2jd09BY'</span>.</div></li>
+<li><div class="src-line"><a name="a141"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'DFmESC+BwA5UCUxhqAhqrA4CGrLpCMVGK4sZe4B+/5RLdiyMb6'</span>.</div></li>
+<li><div class="src-line"><a name="a142"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'on/PuS9CdQNC7yBXEQAAAABJRU5ErkJggg=='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a143"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a144"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a145"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a146"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 25 Apr 2007 00:10:43 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</body>
+</html>

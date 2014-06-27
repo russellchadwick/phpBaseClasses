@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class DataFetch</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class DataFetch</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Classes to assist in fetching data, currently can generate SQL queries and  fill in values in template queries</p>
+		<p class="notes">
+			Located in <a class="field" href="_classDataFetch.php.html">/classDataFetch.php</a> (line <span class="field"><a href="../__filesource/fsource_phpBaseClasses__classDataFetch.php.html#a65">65</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																												
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#DataFetch" title="details" class="method-name">DataFetch</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$description</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#addDescription" title="details" class="method-name">addDescription</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$description</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#executeFetch" title="details" class="method-name">executeFetch</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$order_by</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$search_parameters</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#generateFetch" title="details" class="method-name">generateFetch</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$order_by</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$search_parameters</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#loadDescription" title="details" class="method-name">loadDescription</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$description</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#queryParam" title="details" class="method-name">queryParam</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$field</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#queryParamArray" title="details" class="method-name">queryParamArray</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$params</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodDataFetch" id="DataFetch"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor DataFetch</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataFetch.php.html#a90">90</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor which optionally takes a description.  If a description is not  provided, creating queries will fail.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			DataFetch
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$description</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$description</span><span class="var-description">: Description from $db-&gt;doDescribe</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddDescription" id="addDescription"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">addDescription</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataFetch.php.html#a115">115</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds an description of a table.  Needed from generating joins in a query.</p>
+<p class="description"><p>Either provide a description or a valid table name and it will fetch the description.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addDescription
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$description</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$description</span><span class="var-description">: Description from $db-&gt;doDescribe</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodexecuteFetch" id="executeFetch"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">executeFetch</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataFetch.php.html#a230">230</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates and executes a select query from stored table information</p>
+<p class="description"><p>Search parameters array should have these fields     search_field=&gt;string what column to search on     specific=&gt;boolean     search_text=&gt;what string to search for in search_field</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Data fetched by running the generated query</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			executeFetch
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$order_by</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$search_parameters</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$order_by</span><span class="var-description">: order_by What to order the results by</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$search_parameters</span><span class="var-description">: Search parameters</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgenerateFetch" id="generateFetch"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">generateFetch</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataFetch.php.html#a137">137</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates a select query from stored table information</p>
+<p class="description"><p>Search parameters array should have these fields     search_field=&gt;string what column to search on     specific=&gt;boolean     search_text=&gt;what string to search for in search_field</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Select query</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			generateFetch
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$order_by</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$search_parameters</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$order_by</span><span class="var-description">: order_by What to order the results by</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$search_parameters</span><span class="var-description">: Search parameters</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadDescription" id="loadDescription"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">loadDescription</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataFetch.php.html#a102">102</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Clears all stored descriptions and loads a description of a table.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadDescription
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$description</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$description</span><span class="var-description">: Description from $db-&gt;doDescribe</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodqueryParam" id="queryParam"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">queryParam</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataFetch.php.html#a248">248</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Replaces a field in a given query</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> new query</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			queryParam
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$field</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: original query</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$field</span><span class="var-description">: field name to replace on</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: value to put in its place</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodqueryParamArray" id="queryParamArray"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">queryParamArray</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDataFetch.php.html#a264">264</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Replaces many fields in a given query</p>
+<p class="description"><p>Params array has the following fields     $field_1=&gt;$value_1     $field_2=&gt;$value_2     $field_x=&gt;$value_x</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> new query</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			queryParamArray
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$params</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: original query</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: values to pass to queryParam</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 01 Jan 2008 00:06:31 -0800 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

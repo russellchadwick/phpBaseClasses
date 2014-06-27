@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class DataSave</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class DataSave</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+		<p class="notes">
+			Located in <a class="field" href="_Attic---classDataSave.php,v.html">/Attic/classDataSave.php,v</a> (line <span class="field"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a37">37</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$description" title="details" class="var-name">$description</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$error_message" title="details" class="var-name">$error_message</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$message" title="details" class="var-name">$message</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$query_type" title="details" class="var-name">$query_type</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">DataSave</span>
+										<a href="#DataSave" title="details" class="method-name">DataSave</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$description</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#addErrorMessage" title="details" class="method-name">addErrorMessage</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$column</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#executeSave" title="details" class="method-name">executeSave</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$sequence_data</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#executeSaves" title="details" class="method-name">executeSaves</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$queries</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#fixupAll" title="details" class="method-name">fixupAll</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$substitutes</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#fixupData" title="details" class="method-name">fixupData</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$description</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$column_name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#fixupLength" title="details" class="method-name">fixupLength</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$description</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$text</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$minlength</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$maxlength</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#fixupNull" title="details" class="method-name">fixupNull</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$description</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$column_name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#fixupText" title="details" class="method-name">fixupText</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$description</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$text</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#generateSave" title="details" class="method-name">generateSave</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$substitutes</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getError" title="details" class="method-name">getError</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getSequenceData" title="details" class="method-name">getSequenceData</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#loadDescription" title="details" class="method-name">loadDescription</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$description</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#or0" title="details" class="method-name">or0</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#orNull" title="details" class="method-name">orNull</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">''</span>])
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$description" id="$description"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$description</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$error_message" id="$error_message"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$error_message</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$message" id="$message"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$message</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a41">41</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$query_type" id="$query_type"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$query_type</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a39">39</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodDataSave" id="DataSave"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor DataSave</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a43">43</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">DataSave</span>
+		<span class="method-name">
+			DataSave
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$description</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$description</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddErrorMessage" id="addErrorMessage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">addErrorMessage</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a237">237</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addErrorMessage
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$column</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$column</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$message</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodexecuteSave" id="executeSave"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">executeSave</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a90">90</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			executeSave
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$sequence_data</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$query</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$sequence_data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodexecuteSaves" id="executeSaves"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">executeSaves</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a68">68</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			executeSaves
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$queries</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$queries</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfixupAll" id="fixupAll"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">fixupAll</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a180">180</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			fixupAll
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$substitutes</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$substitutes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfixupData" id="fixupData"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">fixupData</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a191">191</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			fixupData
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$description</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$column_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$description</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$column_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfixupLength" id="fixupLength"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">fixupLength</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a275">275</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			fixupLength
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$description</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$text</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$minlength</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$maxlength</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$description</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$text</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$minlength</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$maxlength</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfixupNull" id="fixupNull"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">fixupNull</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a242">242</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			fixupNull
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$description</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$column_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$description</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$column_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfixupText" id="fixupText"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">fixupText</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a260">260</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			fixupText
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$description</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$description</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$text</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgenerateSave" id="generateSave"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">generateSave</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a108">108</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			generateSave
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$substitutes</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$table</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$substitutes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetError" id="getError"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getError</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a52">52</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getError
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSequenceData" id="getSequenceData"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSequenceData</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a56">56</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getSequenceData
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodloadDescription" id="loadDescription"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">loadDescription</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a48">48</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadDescription
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$description</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$description</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodor0" id="or0"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">or0</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a167">167</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			or0
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodorNull" id="orNull"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">orNull</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__AtticclassDataSave.php,v.html#a172">172</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			orNull
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 01 Aug 2007 00:06:34 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</div></body>
+</html>

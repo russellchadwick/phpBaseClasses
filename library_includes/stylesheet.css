@@ -1,0 +1,38 @@
+a { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #000099; }
+body { background-color: #CCCCCC; }
+div { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
+input { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
+li { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
+p { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
+pre {  font-family: "Courier New", Courier, sans-serif; font-size: 12px; }
+span {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #000000; }
+table { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #000000; }
+td { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #000000; }
+.abold { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #000099; }
+.bold { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #000000; }
+.courier_medium_normal_black { font-family: "Courier New", Courier, mono; font-size: 12px; font-style: normal; font-weight: bold; color: #000000; }
+.default { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #000000; }
+.error { font-family : Arial, Helvetica, Sans-Serif; font-size : 11px; color : #990000; }
+.errorcell { font-family : Arial, Helvetica, Sans-Serif; font-size : 11px; color : #FFFFFF; background-color: #990000; }
+.large_bold_black { font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-weight: bold; color: #000000; }
+.large_bold_gray { font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-weight: bold; color: #CCCCCC; }
+.large_normal_black { font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-weight: normal; color: #000000; }
+.large_normal_gray { font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-weight: normal; color: #CCCCCC; }
+.medium_bold_black { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #000000; }
+.medium_bold_gray { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #CCCCCC; }
+.medium_normal_black { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #000000; }
+.medium_normal_gray { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #CCCCCC; }
+.medium_normal_white { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #FFFFFF; }
+.menu { height: 800px; valign: top; }
+.menu_header { height: 30px; color: #DDDDDD; }
+.menu_header_item { align: center; }
+.menu_item { width: 180px; color: #BBBBBB; nowrap; }
+#PCL { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: normal; text-decoration: none; }
+#PTT { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; }
+#PST { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; }
+.required { font-family : Arial, Helvetica, Sans-Serif; font-size : 14px; color : #990000; }
+.small_normal_black_centered { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; font-weight: normal; color: #000000; align: center; }
+.small_normal_gray { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; font-weight: normal; color: #CCCCCC; }
+.table_even_row { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #000000; background-color: #CCCCDD; }
+.table_header { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #000000; background-color: #BBBBCC; }
+.table_odd_row { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #000000; background-color: #DDDDDD; }

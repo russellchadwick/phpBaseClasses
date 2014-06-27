@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class DateTime</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class DateTime</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The library for working with dates and times</p>
+<p class="description"><p>This class has functions for the conversion, display and manipulation  of dates well outside the usual unix epoch timestamp limitations.</p></p>
+		<p class="notes">
+			Located in <a class="field" href="_classDateTime.php,v.html">/classDateTime.php,v</a> (line <span class="field"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a47">47</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#DateTime" title="details" class="method-name">DateTime</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$beginYear</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$beginDayofWeek</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#addDays" title="details" class="method-name">addDays</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$days</span> = <span class="var-default">1</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$business_days</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#addHours" title="details" class="method-name">addHours</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$hours</span> = <span class="var-default">1</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#addMinutes" title="details" class="method-name">addMinutes</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$minutes</span> = <span class="var-default">1</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#addMonths" title="details" class="method-name">addMonths</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$months</span> = <span class="var-default">1</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#addSeconds" title="details" class="method-name">addSeconds</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$seconds</span> = <span class="var-default">1</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#addWeeks" title="details" class="method-name">addWeeks</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$weeks</span> = <span class="var-default">1</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$inclusive</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#addYears" title="details" class="method-name">addYears</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$years</span> = <span class="var-default">1</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#date" title="details" class="method-name">date</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$timestamp</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#dateCompare" title="details" class="method-name">dateCompare</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date1</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$date2</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#daysBetween" title="details" class="method-name">daysBetween</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date1</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$date2</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$business_days</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$absolute_value</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getdate" title="details" class="method-name">getdate</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$timestamp</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#getDayOfWeekIndex" title="details" class="method-name">getDayOfWeekIndex</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#hoursBetween" title="details" class="method-name">hoursBetween</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date1</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$date2</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$absolute_value</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#isBusinessDay" title="details" class="method-name">isBusinessDay</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#isGreater" title="details" class="method-name">isGreater</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date1</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$date2</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#isGreaterOrEqual" title="details" class="method-name">isGreaterOrEqual</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date1</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$date2</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#lockDateFormat" title="details" class="method-name">lockDateFormat</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#minutesBetween" title="details" class="method-name">minutesBetween</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date1</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$date2</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$absolute_value</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#mktime" title="details" class="method-name">mktime</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$hour</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$minute</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$second</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$month</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$day</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$year</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#now" title="details" class="method-name">now</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#secondsBetween" title="details" class="method-name">secondsBetween</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date1</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$date2</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$absolute_value</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#setDateFormat" title="details" class="method-name">setDateFormat</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodDateTime" id="DateTime"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor DateTime</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a142">142</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor sets all private class variables and default lastFormat</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			DateTime
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$beginYear</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$beginDayofWeek</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$beginYear</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$beginDayofWeek</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddDays" id="addDays"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">addDays</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a940">940</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a given number of days to given date and returns result in same or locked date format</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Adjusted date</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			addDays
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$days</span> = <span class="var-default">1</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$business_days</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$days</span><span class="var-description">: Number of days to add</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$business_days</span><span class="var-description">: Whether to only count business days</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddHours" id="addHours"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">addHours</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a927">927</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a given number of hours to given date and returns result in same or locked date format</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Adjusted date</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			addHours
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$hours</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$hours</span><span class="var-description">: Number of hours to add</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddMinutes" id="addMinutes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">addMinutes</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a915">915</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a given number of minutes to given date and returns result in same or locked date format</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Adjusted date</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			addMinutes
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$minutes</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$minutes</span><span class="var-description">: Number of minutes to add</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddMonths" id="addMonths"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">addMonths</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a1010">1010</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a given number of months to given date and returns result in same or locked date format</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Adjusted date</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			addMonths
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$months</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$months</span><span class="var-description">: Number of months to add</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddSeconds" id="addSeconds"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">addSeconds</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a896">896</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a given number of seconds to given date and returns result in same or locked date format</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Adjusted date</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			addSeconds
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$seconds</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$seconds</span><span class="var-description">: Number of seconds to add</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddWeeks" id="addWeeks"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">addWeeks</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a982">982</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a given number of weeks to given date and returns result in same or locked date format</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Adjusted date</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			addWeeks
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$weeks</span> = <span class="var-default">1</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$inclusive</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$weeks</span><span class="var-description">: Number of weeks to add</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$inclusive</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddYears" id="addYears"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">addYears</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a1035">1035</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a given number of years to given date and returns result in same or locked date format</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Adjusted date</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			addYears
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$years</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$years</span><span class="var-description">: Number of years to add</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddate" id="date"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">date</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a498">498</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a formatted date</p>
+<p class="description"><p>Behaves exactly like PHP's implementation of unix date  http://www.php.net/date  2 new parameters added  X: # of weekday for this month  x: Total # of weekdays for this month</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Formatted date</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			date
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$timestamp</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$format</span><span class="var-description">: Format to return date in</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$timestamp</span><span class="var-description">: Timestamp since January 1st of beginYear in UTC</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddateCompare" id="dateCompare"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">dateCompare</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a833">833</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Compares 2 dates regardless of their format and returns 0 if 2 dates are equal, 1 if second date is greater than first date, and otherwise -1</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 0 if 2 dates are equal, 1 if second date is greater than first date, and otherwise -1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			dateCompare
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date1</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$date2</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date1</span><span class="var-description">: First Date</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date2</span><span class="var-description">: Second Date</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddaysBetween" id="daysBetween"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">daysBetween</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a676">676</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the number of days between 2 dates regardless of their formats</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Number of days between first date and second date</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			daysBetween
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date1</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$date2</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$business_days</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$absolute_value</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date1</span><span class="var-description">: First Date</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date2</span><span class="var-description">: Second Date</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$business_days</span><span class="var-description">: Whether to only count business days</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$absolute_value</span><span class="var-description">: Whether to always return positive number or not</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetdate" id="getdate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getdate</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a653">653</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an associative array of date information  Behaves exactly like PHP's implementation of unix getdate  http://www.php.net/getdate</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Date and time information (seconds, minutes, hours, mday, wday, mon, year, yday, weekday, month)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getdate
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$timestamp</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$timestamp</span><span class="var-description">: Timestamp since January 1st of beginYear in UTC</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetDayOfWeekIndex" id="getDayOfWeekIndex"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getDayOfWeekIndex</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a1069">1069</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the index of the day of week, for example Monday will return 1</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Index of the day of week</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getDayOfWeekIndex
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhoursBetween" id="hoursBetween"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">hoursBetween</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a773">773</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the number of hours between 2 dates regardless of their formats</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Number of hours between first date and second date</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			hoursBetween
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date1</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$date2</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$absolute_value</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date1</span><span class="var-description">: First Date</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date2</span><span class="var-description">: Second Date</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$absolute_value</span><span class="var-description">: Whether to always return positive number or not</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisBusinessDay" id="isBusinessDay"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">isBusinessDay</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a857">857</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Test if given day is a business day or not</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if a business day</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isBusinessDay
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisGreater" id="isGreater"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">isGreater</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a785">785</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Compares 2 dates regardless of their formats and returns true if second date is greater than the first date, otherwise false</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether second date is greater than first date</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isGreater
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date1</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$date2</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date1</span><span class="var-description">: First Date</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date2</span><span class="var-description">: Second Date</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisGreaterOrEqual" id="isGreaterOrEqual"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">isGreaterOrEqual</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a809">809</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Compares 2 dates regardless of their formats and returns true if second date is greater than or equal to the first date, otherwise false</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether second date is greater than first date</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isGreaterOrEqual
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date1</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$date2</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date1</span><span class="var-description">: First Date</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date2</span><span class="var-description">: Second Date</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlockDateFormat" id="lockDateFormat"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">lockDateFormat</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a412">412</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if given format is valid and sets the lockFormat to it so all future returns from this class will be in that format  Leaving format empty will unlock</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether successful, fails when date format is not found</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			lockDateFormat
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$format</span><span class="var-description">: date format</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodminutesBetween" id="minutesBetween"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">minutesBetween</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a760">760</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the number of minutes between 2 dates regardless of their formats</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Number of minutes between first date and second date</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			minutesBetween
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date1</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$date2</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$absolute_value</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date1</span><span class="var-description">: First Date</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date2</span><span class="var-description">: Second Date</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$absolute_value</span><span class="var-description">: Whether to always return positive number or not</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmktime" id="mktime"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">mktime</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a439">439</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the timestamp since January 1st of beginYear in UTC  Behaves exactly like PHP's implementation of unix mktime  http://www.php.net/mktime</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Timestamp since January 1st of beginYear in UTC</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			mktime
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$hour</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$minute</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$second</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$month</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$day</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$year</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$hour</span><span class="var-description">: Empty will cause lookup of current hour</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$minute</span><span class="var-description">: Empty will cause lookup of current minute</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$second</span><span class="var-description">: Empty will cause lookup of current second</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$month</span><span class="var-description">: Empty will cause lookup of current month</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$day</span><span class="var-description">: Empty will cause lookup of current day</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$year</span><span class="var-description">: Empty will cause lookup of current year</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodnow" id="now"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">now</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a1059">1059</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns date and time of now in the last used or locked date format</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Date and time of now in the last used or locked date format</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			now
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$format</span><span class="var-description">: Format to return date in</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsecondsBetween" id="secondsBetween"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">secondsBetween</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a732">732</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the number of seconds between 2 dates regardless of their formats</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Number of seconds between first date and second date</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			secondsBetween
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date1</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$date2</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$absolute_value</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date1</span><span class="var-description">: First Date</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date2</span><span class="var-description">: Second Date</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$absolute_value</span><span class="var-description">: Whether to always return positive number or not</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDateFormat" id="setDateFormat"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setDateFormat</span> (line <span class="line-number"><a href="../__filesource/fsource_phpBaseClasses__classDateTime.php,v.html#a396">396</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if given format is valid and sets the lastFormat to it so future returns from this class will be in that format</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Whether successful, fails when date format is not found</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			setDateFormat
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$format</span><span class="var-description">: date format</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 01 Aug 2007 00:06:43 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</div></body>
+</html>

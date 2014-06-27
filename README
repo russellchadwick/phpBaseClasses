@@ -1,0 +1,2 @@
+To symlink a buncha copies of this code to different LIBRARY paths as I like to do run the extras/symlink_classes.sh from the folder where you would like the symlinks with the 1st argument of the source directory.
+

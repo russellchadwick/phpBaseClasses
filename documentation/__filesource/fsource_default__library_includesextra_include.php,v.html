@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for extra_include.php,v</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file extra_include.php,v</h1>
+<p>Documentation is available at <a href="../default/_library_includes---extra_include.php,v.html">extra_include.php,v</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../default/_library_includes---extra_include.php,v.html#functionmenu">menu</a>&nbsp;<span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a3"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">global&nbsp;</span><span class="src-var">$db</span><span class="src-sym">,&nbsp;</span><span class="src-var">$security</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a4"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a5"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$retval&nbsp;</span>=&nbsp;<span class="src-str">'</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-str">&lt;table&nbsp;width=&quot;100%&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&nbsp;class=&quot;menu_header&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;width=&quot;33%&quot;&nbsp;class=&quot;menu_header_item&quot;&gt;Title&nbsp;1&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;width=&quot;33%&quot;&nbsp;class=&quot;menu_header_item&quot;&gt;Title&nbsp;2&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;width=&quot;33%&quot;&nbsp;class=&quot;menu_header_item&quot;&gt;Title&nbsp;3&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-str">&lt;/table&gt;</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-str">&lt;table&nbsp;width=&quot;100%&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&nbsp;class=&quot;menu&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;menu_item&quot;&gt;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a16"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a17"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$retval</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a19"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a20"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../default/_library_includes---extra_include.php,v.html#functionmenu_end">menu_end</a>&nbsp;<span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a21"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$retval&nbsp;</span>=&nbsp;<span class="src-str">'</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-str">&lt;/table&gt;</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-str">&lt;center&gt;&lt;small&gt;Copyright&nbsp;'&nbsp;</span>.&nbsp;<a href="http://www.php.net/date">date</a>&nbsp;<span class="src-sym">(</span><span class="src-str">'Y'</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'&lt;/small&gt;&lt;/center&gt;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$retval</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 25 Apr 2007 00:09:30 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</body>
+</html>

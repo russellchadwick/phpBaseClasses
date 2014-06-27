@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for function.html_table.php,v</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file function.html_table.php,v</h1>
+<p>Documentation is available at <a href="../default/_addons---smarty---plugins---function.html_table.php,v.html">function.html_table.php,v</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-comm">&nbsp;*&nbsp;Smarty&nbsp;plugin</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-comm">&nbsp;*&nbsp;-------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-comm">&nbsp;*&nbsp;Type:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-comm">&nbsp;*&nbsp;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;html_table</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-comm">&nbsp;*&nbsp;Version:&nbsp;&nbsp;1.0</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-comm">&nbsp;*&nbsp;Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feb&nbsp;17,&nbsp;2003</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-comm">&nbsp;*&nbsp;Author:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monte&nbsp;Ohrt&nbsp;&lt;monte@ispi.net&gt;</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-comm">&nbsp;*&nbsp;Purpose:&nbsp;&nbsp;make&nbsp;an&nbsp;html&nbsp;table&nbsp;from&nbsp;an&nbsp;array&nbsp;of&nbsp;data</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-comm">&nbsp;*&nbsp;Input:&nbsp;&nbsp;&nbsp;&nbsp;loop&nbsp;=&nbsp;array&nbsp;to&nbsp;loop&nbsp;through</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-comm">&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cols&nbsp;=&nbsp;number&nbsp;of&nbsp;columns</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-comm">&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;table_attr&nbsp;=&nbsp;table&nbsp;attributes</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-comm">&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tr_attr&nbsp;=&nbsp;table&nbsp;row&nbsp;attributes&nbsp;(arrays&nbsp;are&nbsp;cycled)</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-comm">&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;td_attr&nbsp;=&nbsp;table&nbsp;cell&nbsp;attributes&nbsp;(arrays&nbsp;are&nbsp;cycled)</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-comm">&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trailpad&nbsp;=&nbsp;value&nbsp;to&nbsp;pad&nbsp;trailing&nbsp;cells&nbsp;with</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-comm">&nbsp;*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-comm">&nbsp;*&nbsp;Examples:&nbsp;{table&nbsp;loop=$data}</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-comm">&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$table&nbsp;loop=$data&nbsp;cols=4&nbsp;tr_attr='&quot;bgcolor=red&quot;'}</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-comm">&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$table&nbsp;loop=$data&nbsp;cols=4&nbsp;tr_attr=$colors}</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-comm">&nbsp;*&nbsp;-------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-comm">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-key">function&nbsp;</span><a href="../default/_addons---smarty---plugins---function.html_table.php,v.html#functionsmarty_function_html_table">smarty_function_html_table</a><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">,&nbsp;</span><span class="src-sym">&amp;</span><span class="src-var">$smarty</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$table_attr&nbsp;</span>=&nbsp;<span class="src-str">'border=&quot;1&quot;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$tr_attr&nbsp;</span>=&nbsp;<span class="src-str">''</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$td_attr&nbsp;</span>=&nbsp;<span class="src-str">''</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$cols&nbsp;</span>=&nbsp;<span class="src-num">3</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$trailpad&nbsp;</span>=&nbsp;<span class="src-str">'&amp;nbsp;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a31"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/extract">extract</a><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-sym">!</span>isset<span class="src-sym">(</span><span class="src-var">$loop</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$smarty</span><span class="src-sym">-&gt;</span><a href="http://www.php.net/trigger_error">trigger_error</a><span class="src-sym">(</span><span class="src-str">&quot;html_table:&nbsp;missing&nbsp;'loop'&nbsp;parameter&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output&nbsp;</span>=&nbsp;<span class="src-str">&quot;</span><span class="src-str">&lt;<span class="src-id">table</span>&nbsp;<span class="src-var">$table_attr</span>&gt;\n</span><span class="src-str">&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output&nbsp;</span>.=&nbsp;<span class="src-str">&quot;&lt;tr&nbsp;&quot;&nbsp;</span>.&nbsp;<a href="../default/_addons---smarty---plugins---function.html_table.php,v.html#functionsmarty_function_html_table_cycle">smarty_function_html_table_cycle</a><span class="src-sym">(</span><span class="src-str">'tr'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$tr_attr</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">&quot;&gt;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a42"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">for</span><span class="src-sym">(</span><span class="src-var">$x&nbsp;</span>=&nbsp;<span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-var">$y&nbsp;</span>=&nbsp;<a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$loop</span><span class="src-sym">)</span><span class="src-sym">;&nbsp;</span><span class="src-var">$x&nbsp;</span>&lt;&nbsp;<span class="src-var">$y</span><span class="src-sym">;&nbsp;</span><span class="src-var">$x</span>++<span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output&nbsp;</span>.=&nbsp;<span class="src-str">&quot;&lt;td&nbsp;&quot;&nbsp;</span>.&nbsp;<a href="../default/_addons---smarty---plugins---function.html_table.php,v.html#functionsmarty_function_html_table_cycle">smarty_function_html_table_cycle</a><span class="src-sym">(</span><span class="src-str">'td'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$td_attr</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">&quot;&gt;&quot;&nbsp;</span>.&nbsp;<span class="src-var">$loop</span><span class="src-sym">[</span><span class="src-var">$x</span><span class="src-sym">]&nbsp;</span>.&nbsp;<span class="src-str">&quot;&lt;/td&gt;\n&quot;</span><span class="src-sym">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if</span><span class="src-sym">((</span><span class="src-sym">!</span><span class="src-sym">((</span><span class="src-var">$x</span>+<span class="src-num">1</span><span class="src-sym">)&nbsp;</span>%&nbsp;<span class="src-var">$cols</span><span class="src-sym">))&nbsp;</span>&amp;&amp;&nbsp;<span class="src-var">$x&nbsp;</span>&lt;&nbsp;<span class="src-var">$y</span>-<span class="src-num">1</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;go&nbsp;to&nbsp;next&nbsp;row</span></div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output&nbsp;</span>.=&nbsp;<span class="src-str">&quot;&lt;/tr&gt;\n&lt;tr&nbsp;&quot;&nbsp;</span>.&nbsp;<a href="../default/_addons---smarty---plugins---function.html_table.php,v.html#functionsmarty_function_html_table_cycle">smarty_function_html_table_cycle</a><span class="src-sym">(</span><span class="src-str">'tr'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$tr_attr</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">&quot;&gt;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if</span><span class="src-sym">(</span><span class="src-var">$x&nbsp;</span>==&nbsp;<span class="src-var">$y</span>-<span class="src-num">1</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;last&nbsp;row,&nbsp;pad&nbsp;remaining&nbsp;cells</span></div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$cells&nbsp;</span>=&nbsp;<span class="src-var">$cols&nbsp;</span>-&nbsp;<span class="src-var">$y&nbsp;</span>%&nbsp;<span class="src-var">$cols</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if</span><span class="src-sym">(</span><span class="src-var">$cells&nbsp;</span>!=&nbsp;<span class="src-var">$cols</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">for</span><span class="src-sym">(</span><span class="src-var">$padloop&nbsp;</span>=&nbsp;<span class="src-num">0</span><span class="src-sym">;&nbsp;</span><span class="src-var">$padloop&nbsp;</span>&lt;&nbsp;<span class="src-var">$cells</span><span class="src-sym">;&nbsp;</span><span class="src-var">$padloop</span>++<span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output&nbsp;</span>.=&nbsp;<span class="src-str">&quot;&lt;td&nbsp;&quot;&nbsp;</span>.&nbsp;<a href="../default/_addons---smarty---plugins---function.html_table.php,v.html#functionsmarty_function_html_table_cycle">smarty_function_html_table_cycle</a><span class="src-sym">(</span><span class="src-str">'td'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$td_attr</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">&quot;</span><span class="src-str">&gt;<span class="src-var">$trailpad</span>&lt;/<span class="src-id">td</span>&gt;\n</span><span class="src-str">&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output&nbsp;</span>.=&nbsp;<span class="src-str">&quot;&lt;/tr&gt;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a58"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a59"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output&nbsp;</span>.=&nbsp;<span class="src-str">&quot;&lt;/table&gt;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$output</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a63"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a65"></a><span class="src-key">function&nbsp;</span><a href="../default/_addons---smarty---plugins---function.html_table.php,v.html#functionsmarty_function_html_table_cycle">smarty_function_html_table_cycle</a><span class="src-sym">(</span><span class="src-var">$name</span><span class="src-sym">,&nbsp;</span><span class="src-var">$var</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">static&nbsp;</span><span class="src-var">$names&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a67"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a68"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if</span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-id">is_array</span><span class="src-sym">(</span><span class="src-var">$var</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a69"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$var</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a70"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a71"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a72"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if</span><span class="src-sym">(</span><span class="src-sym">!</span>isset<span class="src-sym">(</span><span class="src-var">$names</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span><span class="src-sym">)&nbsp;</span>||&nbsp;<span class="src-var">$names</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]&nbsp;</span>==&nbsp;<a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$var</span><span class="src-sym">)</span>-<span class="src-num">1</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a73"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$names</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">0</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a74"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$var</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a75"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a76"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a77"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$names</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]</span>++<span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a78"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$var</span><span class="src-sym">[</span><span class="src-var">$names</span><span class="src-sym">[</span><span class="src-var">$name</span><span class="src-sym">]]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a79"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a80"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a81"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a82"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a83"></a><span class="src-comm">/*&nbsp;vim:&nbsp;set&nbsp;expandtab:&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a84"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a85"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 25 Apr 2007 00:09:52 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</body>
+</html>

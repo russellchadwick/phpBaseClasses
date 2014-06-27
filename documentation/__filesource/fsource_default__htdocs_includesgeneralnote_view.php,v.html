@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for note_view.php,v</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file note_view.php,v</h1>
+<p>Documentation is available at <a href="../default/_htdocs_includes---general---note_view.php,v.html">note_view.php,v</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$DEBUG&nbsp;</span>=&nbsp;<span class="src-num">1</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a3"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-inc">include&nbsp;</span><span class="src-str">'begin.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a4"></a>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$display</span><span class="src-sym">-&gt;</span><span class="src-id">head&nbsp;</span><span class="src-sym">(</span><span class="src-str">'View&nbsp;Note'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a5"></a>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-id">tab&nbsp;</span><span class="src-sym">(</span><span class="src-var">$_GET</span><span class="src-sym">[</span><span class="src-str">'tab'</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a6"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a7"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-key">empty&nbsp;</span><span class="src-sym">(</span><span class="src-var">$_GET</span><span class="src-sym">[</span><span class="src-str">'note_id'</span><span class="src-sym">]</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a8"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$note&nbsp;</span>=&nbsp;<span class="src-var">$db</span><span class="src-sym">-&gt;</span><span class="src-id">doQuery1Row&nbsp;</span><span class="src-sym">(</span><span class="src-str">&quot;SELECT&nbsp;n.note_id,&nbsp;n.when_noted,&nbsp;n.title,&nbsp;n.note,&nbsp;u.first_name||'&nbsp;'||u.last_name&nbsp;AS&nbsp;name,&nbsp;n.security_object_reference_id,&nbsp;so.name&nbsp;AS&nbsp;security_object,&nbsp;so.foreign_table,&nbsp;so.foreign_id_column,&nbsp;so.foreign_name_column&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FROM&nbsp;notes&nbsp;n,&nbsp;security.users&nbsp;u,&nbsp;security.security_objects&nbsp;so</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WHERE&nbsp;n.user_id&nbsp;=&nbsp;u.user_id&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND&nbsp;n.security_object_id&nbsp;=&nbsp;so.security_object_id&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND&nbsp;n.note_id&nbsp;=&nbsp;&quot;&nbsp;</span>.&nbsp;<span class="src-var">$_GET</span><span class="src-sym">[</span><span class="src-str">'note_id'</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a13"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a14"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$soinfo&nbsp;</span>=&nbsp;<span class="src-var">$db</span><span class="src-sym">-&gt;</span><span class="src-id">doQuery1Row&nbsp;</span><span class="src-sym">(</span><span class="src-str">&quot;SELECT&nbsp;&quot;&nbsp;</span>.&nbsp;<span class="src-var">$note</span><span class="src-sym">[</span><span class="src-str">'foreign_name_column'</span><span class="src-sym">]&nbsp;</span>.&nbsp;<span class="src-str">&quot;&nbsp;FROM&nbsp;&quot;&nbsp;</span>.&nbsp;<span class="src-var">$note</span><span class="src-sym">[</span><span class="src-str">'foreign_table'</span><span class="src-sym">]&nbsp;</span>.&nbsp;<span class="src-str">&quot;&nbsp;WHERE&nbsp;&quot;&nbsp;</span>.&nbsp;<span class="src-var">$note</span><span class="src-sym">[</span><span class="src-str">'foreign_id_column'</span><span class="src-sym">]&nbsp;</span>.&nbsp;<span class="src-str">&quot;&nbsp;=&nbsp;&quot;&nbsp;</span>.&nbsp;<span class="src-var">$note</span><span class="src-sym">[</span><span class="src-str">'security_object_reference_id'</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a15"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a16"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a17"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">((</span>isset&nbsp;<span class="src-sym">(</span><span class="src-var">$note</span><span class="src-sym">[</span><span class="src-str">'title'</span><span class="src-sym">]</span><span class="src-sym">))&nbsp;</span>&amp;&amp;&nbsp;<span class="src-sym">(</span><span class="src-sym">!</span><span class="src-key">empty&nbsp;</span><span class="src-sym">(</span><span class="src-var">$note</span><span class="src-sym">[</span><span class="src-str">'title'</span><span class="src-sym">]</span><span class="src-sym">)))&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">'</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-str">&lt;table&nbsp;align=&quot;center&quot;&nbsp;cellspacing=&quot;3&quot;&nbsp;cellpadding=&quot;3&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&nbsp;class=&quot;table_header&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;colspan=&quot;2&quot;&nbsp;class=&quot;table_header_large&quot;&nbsp;align=&quot;center&quot;&gt;Note'</span><span class="src-sym">,&nbsp;</span><span class="src-sym">((</span>isset&nbsp;<span class="src-sym">(</span><span class="src-var">$_GET</span><span class="src-sym">[</span><span class="src-str">'header'</span><span class="src-sym">]</span><span class="src-sym">))&nbsp;</span>&amp;&amp;&nbsp;<span class="src-sym">(</span><span class="src-sym">!</span><span class="src-key">empty&nbsp;</span><span class="src-sym">(</span><span class="src-var">$_GET</span><span class="src-sym">[</span><span class="src-str">'header'</span><span class="src-sym">]</span><span class="src-sym">)))&nbsp;</span>?&nbsp;<span class="src-str">'&lt;br&gt;'&nbsp;</span>.&nbsp;<span class="src-var">$_GET</span><span class="src-sym">[</span><span class="src-str">'header'</span><span class="src-sym">]&nbsp;</span>:&nbsp;<span class="src-str">''</span><span class="src-sym">,&nbsp;</span><span class="src-str">'&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&nbsp;class=&quot;table_odd_row&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Task&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;'&nbsp;</span>.&nbsp;<span class="src-var">$note</span><span class="src-sym">[</span><span class="src-str">'title'</span><span class="src-sym">]&nbsp;</span>.&nbsp;<span class="src-str">'&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&nbsp;class=&quot;table_even_row&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Note&nbsp;Opened&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;'&nbsp;</span>.&nbsp;<span class="src-var">$note</span><span class="src-sym">[</span><span class="src-str">'when_noted'</span><span class="src-sym">]&nbsp;</span>.&nbsp;<span class="src-str">'&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&nbsp;class=&quot;table_odd_row&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Note&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;'&nbsp;</span>.&nbsp;<span class="src-var">$note</span><span class="src-sym">[</span><span class="src-str">'note'</span><span class="src-sym">]&nbsp;</span>.&nbsp;<span class="src-str">'&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&nbsp;class=&quot;table_header&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;colspan=&quot;2&quot;&nbsp;class=&quot;table_header_large&quot;&gt;&amp;nbsp;&lt;/td&gt;</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-str">&lt;/table&gt;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}&nbsp;</span><span class="src-key">else&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">'Could&nbsp;not&nbsp;find&nbsp;the&nbsp;specified&nbsp;note'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a42"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-inc">include&nbsp;</span><span class="src-str">'end.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a44"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 25 Apr 2007 00:14:06 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</body>
+</html>

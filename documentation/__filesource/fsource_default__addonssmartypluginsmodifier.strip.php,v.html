@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for modifier.strip.php,v</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file modifier.strip.php,v</h1>
+<p>Documentation is available at <a href="../default/_addons---smarty---plugins---modifier.strip.php,v.html">modifier.strip.php,v</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-comm">&nbsp;*&nbsp;Smarty&nbsp;plugin</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-comm">&nbsp;*&nbsp;-------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-comm">&nbsp;*&nbsp;Type:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifier</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-comm">&nbsp;*&nbsp;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strip</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-comm">&nbsp;*&nbsp;Purpose:&nbsp;&nbsp;Replace&nbsp;all&nbsp;repeated&nbsp;spaces,&nbsp;newlines,&nbsp;tabs</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-comm">&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;a&nbsp;single&nbsp;space&nbsp;or&nbsp;supplied&nbsp;replacement&nbsp;string.</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-comm">&nbsp;*&nbsp;Example:&nbsp;&nbsp;{$var|strip}&nbsp;{$var|strip:&quot;&amp;nbsp;&quot;}</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-comm">&nbsp;*&nbsp;Author:&nbsp;&nbsp;&nbsp;Monte&nbsp;Ohrt&nbsp;&lt;monte@ispi.net&gt;</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-comm">&nbsp;*&nbsp;Version:&nbsp;&nbsp;1.0</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-comm">&nbsp;*&nbsp;Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;September&nbsp;25th,&nbsp;2002</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-comm">&nbsp;*&nbsp;-------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-comm">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-key">function&nbsp;</span><a href="../default/_addons---smarty---plugins---modifier.strip.php,v.html#functionsmarty_modifier_strip">smarty_modifier_strip</a><span class="src-sym">(</span><span class="src-var">$text</span><span class="src-sym">,&nbsp;</span><span class="src-var">$replace&nbsp;</span>=&nbsp;<span class="src-str">'&nbsp;'</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">'!\s+!'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$replace</span><span class="src-sym">,&nbsp;</span><span class="src-var">$text</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a20"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-comm">/*&nbsp;vim:&nbsp;set&nbsp;expandtab:&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 25 Apr 2007 00:14:05 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</body>
+</html>

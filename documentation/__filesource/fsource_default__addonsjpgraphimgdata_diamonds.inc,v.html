@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for imgdata_diamonds.inc,v</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file imgdata_diamonds.inc,v</h1>
+<p>Documentation is available at <a href="../default/_addons---jpgraph---imgdata_diamonds.inc,v.html">imgdata_diamonds.inc,v</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-comm">//=======================================================================</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-comm">//&nbsp;File:&nbsp;&nbsp;&nbsp;&nbsp;IMGDATA_DIAMONDS.INC</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-comm">//&nbsp;Description:&nbsp;&nbsp;&nbsp;&nbsp;Base64&nbsp;encoded&nbsp;images&nbsp;for&nbsp;diamonds</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-comm">//&nbsp;Created:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2003-03-20</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-comm">//&nbsp;Author:&nbsp;&nbsp;&nbsp;&nbsp;Johan&nbsp;Persson&nbsp;(johanp@aditus.nu)</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-comm">//&nbsp;Ver:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$Id:&nbsp;imgdata_diamonds.inc,v&nbsp;1.1&nbsp;2003/03/23&nbsp;13:37:36&nbsp;aditus&nbsp;Exp&nbsp;$</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-comm">//</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-comm">//&nbsp;License:&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;code&nbsp;is&nbsp;released&nbsp;under&nbsp;QPL&nbsp;1.0&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-comm">//&nbsp;Copyright&nbsp;(C)&nbsp;2003&nbsp;Johan&nbsp;Persson&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-comm">//========================================================================</span></div></li>
+<li><div class="src-line"><a name="a12"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-key">class&nbsp;</span><a href="../default/ImgData_Diamonds.html">ImgData_Diamonds</a>&nbsp;<span class="src-key">extends&nbsp;</span><a href="../default/ImgData.html">ImgData</a>&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a14"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Diamonds.html#var$name">$name</a>&nbsp;=&nbsp;<span class="src-str">'Diamonds'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a15"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Diamonds.html#var$an">$an</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-id">MARK_IMG_DIAMOND&nbsp;</span>=&gt;<span class="src-str">'imgdata'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a16"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Diamonds.html#var$colors">$colors</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'lightblue'</span><span class="src-sym">,</span><span class="src-str">'darkblue'</span><span class="src-sym">,</span><span class="src-str">'gray'</span><span class="src-sym">,&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a17"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'blue'</span><span class="src-sym">,</span><span class="src-str">'pink'</span><span class="src-sym">,</span><span class="src-str">'purple'</span><span class="src-sym">,</span><span class="src-str">'red'</span><span class="src-sym">,</span><span class="src-str">'yellow'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Diamonds.html#var$index">$index</a>&nbsp;&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'lightblue'&nbsp;</span>=&gt;<span class="src-num">7</span><span class="src-sym">,</span><span class="src-str">'darkblue'</span>=&gt;<span class="src-num">2</span><span class="src-sym">,</span><span class="src-str">'gray'</span>=&gt;<span class="src-num">6</span><span class="src-sym">,&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a19"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'blue'</span>=&gt;<span class="src-num">4</span><span class="src-sym">,</span><span class="src-str">'pink'</span>=&gt;<span class="src-num">1</span><span class="src-sym">,</span><span class="src-str">'purple'</span>=&gt;<span class="src-num">5</span><span class="src-sym">,</span><span class="src-str">'red'</span>=&gt;<span class="src-num">0</span><span class="src-sym">,</span><span class="src-str">'yellow'</span>=&gt;<span class="src-num">3</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a20"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a21"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Diamonds.html#var$maxidx">$maxidx</a>&nbsp;=&nbsp;<span class="src-num">7&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">$imgdata</a>&nbsp;<span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a23"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../default/ImgData_Diamonds.html#methodImgData_Diamonds">ImgData_Diamonds</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-comm">//&nbsp;File:&nbsp;diam_red.png</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">668&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAA/F'</span>.</div></li>
+<li><div class="src-line"><a name="a31"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX///////+cAAD/AADOAABjAABrAADWGBjOCAj/CAj/GBj/'</span>.</div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'EBCcCAiMOTl7KSl7ISFzGBilGBjOEBBrCAjv5+eMQkK1QkKtMT'</span>.</div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'GtKSnWKSn/KSlzEBCcEBDexsb/tbXOe3ucWlqcUlKUSkr/e3vn'</span>.</div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'a2u9UlL/a2uEMTHeUlLeSkqtOTn/UlL/SkrWOTn/QkL/OTmlIS'</span>.</div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'H/MTH/ISH39/f/9/f35+fezs7/5+fvzs7WtbXOra3nvb3/zs7G'</span>.</div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'nJzvtbXGlJTepaW9jIy1hITWlJS1e3uta2ulY2P/lJTnhITne3'</span>.</div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'vGY2O9Wlr/c3PeY2O1Skr/Y2P/WlreQkLWISGlEBCglEUaAAAA'</span>.</div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAA'</span>.</div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'sSAdLdfvwAAAAHdElNRQfTAwsWEw5WI4qnAAABGUlEQVR4nHXQ'</span>.</div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'1XLDMBAFUKUCM1NiO8zcpIxpp8z0//9SWY7b2LHv6EU6s1qtAN'</span>.</div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iMBAojLPkigpJvogKC4pxDuQipjanlICXof1RQDkYEF21mKIfg'</span>.</div></li>
+<li><div class="src-line"><a name="a42"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'/GGKtjAmOKt9oSyuCU7OhyiDCQnjowGfRnooCJIkiWJvv8NxnG'</span>.</div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'nyNAwFcekvZpPP3mu7Vrp8fOq8DYbTyjdnAvBj7Jbd7nP95urs'</span>.</div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'+MC2D6unF+Cu0VJULQBAlsOQuueN3Hrp2nGUvqppemBZ0aU7Se'</span>.</div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'SXvYZFMKaLJn7MH3btJmZEMEmGSOreqy0SI/4ffo3uiUOYEACy'</span>.</div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'OFopmNWlP5uZd9uPWmUoxvK9ilO9NtBo6mS7KkZD0fOJYqgGBU'</span>.</div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'S/T7OKCAA9tfsFOicXcbxt29cAAAAASUVORK5CYII='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a49"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a50"></a><span class="src-comm">//&nbsp;File:&nbsp;diam_pink.png</span></div></li>
+<li><div class="src-line"><a name="a51"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">262&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABsAAAAbBAMAAAB/+ulmAAAAEl'</span>.</div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX///+AgID/M5n/Zpn/zMz/mZn1xELhAAAAAXRSTlMAQObY'</span>.</div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'ZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAA'</span>.</div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AHdElNRQfTAwsWEi3tX8qUAAAAbUlEQVR4nFXJwQ3AMAhDUdRm'</span>.</div></li>
+<li><div class="src-line"><a name="a58"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'kKojuCswABf2X6UEEiC+WF+PyDfoGEuvwXogq3Rk1Y6W0tBSG8'</span>.</div></li>
+<li><div class="src-line"><a name="a59"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'6Uwpla6CmJnpoYKRsjjb/Y63vo9kIkLcZCCsbGYGwMRqIzEp1R'</span>.</div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'OBmFk9HQGA2N0ZEIz5HX+h/jailYpfz4dAAAAABJRU5ErkJggg'</span>.</div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'=='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a63"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a64"></a><span class="src-comm">//&nbsp;File:&nbsp;diam_blue.png</span></div></li>
+<li><div class="src-line"><a name="a65"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">662&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a67"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a68"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAA+V'</span>.</div></li>
+<li><div class="src-line"><a name="a69"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX///+AgIAAAJwAAP8AAM4AAGMAAGsQEP8YGHMQEHMYGP8Q'</span>.</div></li>
+<li><div class="src-line"><a name="a70"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'EKUICJwICM5KSpQxMYQpKXsYGNYQEM4ICGsICP97e85aWpw5OY'</span>.</div></li>
+<li><div class="src-line"><a name="a71"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'xSUv85ObVCQt4xMa0pKa0hIaUpKf+9vd6EhLVra+dzc/9SUr1r'</span>.</div></li>
+<li><div class="src-line"><a name="a72"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'a/9aWt5SUt5CQrVaWv9KSv8hIXs5Of8xMf8pKdYhIdYYGKUhIf'</span>.</div></li>
+<li><div class="src-line"><a name="a73"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'/Ozs739//v7/fn5+/v7//n5/fW1ufOzufOzu/W1v+trc69veel'</span>.</div></li>
+<li><div class="src-line"><a name="a74"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'pc6trd6UlMa9vf+MjL21tfe1tf+UlNZzc61ra6Wlpf+EhOeMjP'</span>.</div></li>
+<li><div class="src-line"><a name="a75"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'9ra8ZSUpyEhP9CQoxKSrVCQv85Od4xMdYQENZnJhlWAAAAAXRS'</span>.</div></li>
+<li><div class="src-line"><a name="a76"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'TlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAd'</span>.</div></li>
+<li><div class="src-line"><a name="a77"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'LdfvwAAAAHdElNRQfTAwsWEx3Snct5AAABFklEQVR4nHXR5XbD'</span>.</div></li>
+<li><div class="src-line"><a name="a78"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'IBgGYM6AuHsaqbvOfeuknev9X8xISbplSd5/8JyXwwcA/I0AKm'</span>.</div></li>
+<li><div class="src-line"><a name="a79"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'PFchVBdvKNKggKQx2VIoRwMZihMiQE49YUlWBCcPL0hYq4ITh+'</span>.</div></li>
+<li><div class="src-line"><a name="a80"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'qKECUoLDZWqoQNA766F/mJHlHXblPJJNiyURhM5eU9cNw5BlmS'</span>.</div></li>
+<li><div class="src-line"><a name="a81"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'IrLOLxhzfotF7vwO2j3ez2ap/TmW4AIM7DoN9+tu+vLk6Pdg9O'</span>.</div></li>
+<li><div class="src-line"><a name="a82"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'6ufXjfXLm6pxPACSJIpRFAa+/26DhuK6qjbiON40k0N3skjOvm'</span>.</div></li>
+<li><div class="src-line"><a name="a83"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'NijBmchF5mi+1jhQqDmWyIzPp1hUlrv8On5l+6mMm1tigFNyrt'</span>.</div></li>
+<li><div class="src-line"><a name="a84"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'5R97g+FKKyGKkTNKesXPJTZXOFIrUoKiypcTQVHjK4g8H2dWEQ'</span>.</div></li>
+<li><div class="src-line"><a name="a85"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'B8bvUDLSQXSr41rmEAAAAASUVORK5CYII='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a86"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a87"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a88"></a><span class="src-comm">//&nbsp;File:&nbsp;diam_yellow.png</span></div></li>
+<li><div class="src-line"><a name="a89"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a90"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">262&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a91"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a92"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABsAAAAbBAMAAAB/+ulmAAAAEl'</span>.</div></li>
+<li><div class="src-line"><a name="a93"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX///+AgIBmMwCZZgD/zADMmQD/QLMZAAAAAXRSTlMAQObY'</span>.</div></li>
+<li><div class="src-line"><a name="a94"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'ZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAA'</span>.</div></li>
+<li><div class="src-line"><a name="a95"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AHdElNRQfTAwsWEwcv/zIDAAAAbUlEQVR4nFXJwQ3AMAhDUdRm'</span>.</div></li>
+<li><div class="src-line"><a name="a96"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'kKojuCswABf2X6UEEiC+WF+PyDfoGEuvwXogq3Rk1Y6W0tBSG8'</span>.</div></li>
+<li><div class="src-line"><a name="a97"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'6Uwpla6CmJnpoYKRsjjb/Y63vo9kIkLcZCCsbGYGwMRqIzEp1R'</span>.</div></li>
+<li><div class="src-line"><a name="a98"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'OBmFk9HQGA2N0ZEIz5HX+h/jailYpfz4dAAAAABJRU5ErkJggg'</span>.</div></li>
+<li><div class="src-line"><a name="a99"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'=='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a100"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a101"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a102"></a><span class="src-comm">//&nbsp;File:&nbsp;diam_lightblue.png</span></div></li>
+<li><div class="src-line"><a name="a103"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a104"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">671&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a105"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a106"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAA/1'</span>.</div></li>
+<li><div class="src-line"><a name="a107"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX///+AgIAAnP8A//8Azv8AY/8Aa/8I//8Y1v8Izv8Y//8Q'</span>.</div></li>
+<li><div class="src-line"><a name="a108"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'//8InP8Qzv8Ypf85jP8he/8Yc/8Ia/8pe/8p//8p1v9Ctf8xrf'</span>.</div></li>
+<li><div class="src-line"><a name="a109"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'8prf8QnP8Qc/9CjP+1//97//9r//9S//9K//9C//85//8x//8h'</span>.</div></li>
+<li><div class="src-line"><a name="a110"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'//9r5/9K3v9S3v851v97zv9Svf85rf8hpf/G3v9SnP9anP9KlP'</span>.</div></li>
+<li><div class="src-line"><a name="a111"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'8xhP/n7//v7+f3///n///O//+U//9z//9j//9a//975/9C3v8h'</span>.</div></li>
+<li><div class="src-line"><a name="a112"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'1v+E5/+17/9j3v/O7//n9/+95/+l3v9jxv+U1v8Qpf9avf9Ktf'</span>.</div></li>
+<li><div class="src-line"><a name="a113"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'+Uxv+11v97tf9rrf+cxv+Mvf9jpf+tzv+Etf/O3v/39/8Akkxr'</span>.</div></li>
+<li><div class="src-line"><a name="a114"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACx'</span>.</div></li>
+<li><div class="src-line"><a name="a115"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'IAAAsSAdLdfvwAAAAHdElNRQfTAwsWEiHk6Ya/AAABGUlEQVR4'</span>.</div></li>
+<li><div class="src-line"><a name="a116"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'nHXQ13KDMBAF0J2o0E01GHDvJa7p3em95/+/JQJMYjDc0Yt0Zr'</span>.</div></li>
+<li><div class="src-line"><a name="a117"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'VaAaxHgtxwbSGPkGQpOIeQ2ORxJiJmNWYZyAhZR0WcgQGhViU0'</span>.</div></li>
+<li><div class="src-line"><a name="a118"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'nEGoedDHGxgRapRPcRpXhOr7XZzCmLjaXk9IIjvkOEmSRLG62+'</span>.</div></li>
+<li><div class="src-line"><a name="a119"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'F5XlEElhA5sW21GvXj6mGlDBfnJ51lr9svnvEKwH1hu2QPbwd3'</span>.</div></li>
+<li><div class="src-line"><a name="a120"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'N9eXVzuL7/Hn29frdKaamgcgy67L3HFG9gDefV+dm5qme4YRXL'</span>.</div></li>
+<li><div class="src-line"><a name="a121"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'oVR374mRqUELZYosf84XAxISFRQuMh4rrH8YxGSP6HX6H97NNQ'</span>.</div></li>
+<li><div class="src-line"><a name="a122"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'KEAaR08qCeuSnx2a8zIPWqUowtKHSRK91rAw0elmVYQFVc8mhq'</span>.</div></li>
+<li><div class="src-line"><a name="a123"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'7p5RD7Ps3IIwA9sfsFxFUX6eZ4Zh4AAAAASUVORK5CYII='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a124"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a125"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a126"></a><span class="src-comm">//&nbsp;File:&nbsp;diam_purple.png</span></div></li>
+<li><div class="src-line"><a name="a127"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a128"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">5</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">657&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a129"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">5</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a130"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAA/F'</span>.</div></li>
+<li><div class="src-line"><a name="a131"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX///////8xAP/OAP+cAP9jAP9rAP+cCP85CP/OEP9SKf/O'</span>.</div></li>
+<li><div class="src-line"><a name="a132"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'CP9CEP9zGP9rCP+lGP/WOf/WIf9KIf9jOf+MQv+EMf97If9zEP'</span>.</div></li>
+<li><div class="src-line"><a name="a133"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'+1Sv+lIf/ne//eUv/na//n5//Oxv/Wzv+chP9zUv97Wv9rQv9a'</span>.</div></li>
+<li><div class="src-line"><a name="a134"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'Mf9KGP/v5/+te/97Kf+9Y/+tOf+tKf+lEP/vtf/WMf/WKf/v7+'</span>.</div></li>
+<li><div class="src-line"><a name="a135"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'f39/+tnP+9rf9rSv9jQv9CGP+ljP+EY//Gtf+tlP+Ma/9zSv/e'</span>.</div></li>
+<li><div class="src-line"><a name="a136"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'zv+UUv+9lP+cWv+lY/+cUv+MOf+EKf+UQv/Opf/OhP/Ga/+1Qv'</span>.</div></li>
+<li><div class="src-line"><a name="a137"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'/Oe/+9Uv/ntf/eWv/eSv/WGP/3zv/vlP/WEP//9/+pL4oHAAAA'</span>.</div></li>
+<li><div class="src-line"><a name="a138"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAA'</span>.</div></li>
+<li><div class="src-line"><a name="a139"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'sSAdLdfvwAAAAHdElNRQfTAwsWEjX+M1LCAAABDklEQVR4nHXQ'</span>.</div></li>
+<li><div class="src-line"><a name="a140"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'1bLDIBAGYFqIEW+ksbr7cXd3ff93OUCamdOE/Mxw882yywLwPz'</span>.</div></li>
+<li><div class="src-line"><a name="a141"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'+gNKotlRFUVnNUQlCxTMRFCKEdE+MgpJaEiIOU4DKaoSIygtb3'</span>.</div></li>
+<li><div class="src-line"><a name="a142"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'FBUQrm3xjPK4JvXjK0A5hFniYSBtIilQVYUm+X0KTVNiYah+2q'</span>.</div></li>
+<li><div class="src-line"><a name="a143"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'ulFb8nUbSovD2+TCavwXQWmnMA6ro+di+uR5cPzfPhVqPV3N1p'</span>.</div></li>
+<li><div class="src-line"><a name="a144"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'n3b3+rimAWAYhP3xnXd7P6oc9vadPsa1wYEs00dFQRAFehlX21'</span>.</div></li>
+<li><div class="src-line"><a name="a145"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'25Sg9NOgwF5jeNTjVL9om0TjDc1lmeCKZ17nFPzhPtSRt6J06R'</span>.</div></li>
+<li><div class="src-line"><a name="a146"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'WKUoeG3MoXRa/wjLHGLodwZcotPqjsYngnWslRBZH91hWTbpD2'</span>.</div></li>
+<li><div class="src-line"><a name="a147"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'EdF1ECWW1SAAAAAElFTkSuQmCC'&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a148"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a149"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a150"></a><span class="src-comm">//&nbsp;File:&nbsp;diam_gray.png</span></div></li>
+<li><div class="src-line"><a name="a151"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a152"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">6</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">262&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a153"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">6</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a154"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABsAAAAbBAMAAAB/+ulmAAAAEl'</span>.</div></li>
+<li><div class="src-line"><a name="a155"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX//////wAzMzNmZmbMzMyZmZlq4Qo5AAAAAXRSTlMAQObY'</span>.</div></li>
+<li><div class="src-line"><a name="a156"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'ZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAA'</span>.</div></li>
+<li><div class="src-line"><a name="a157"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AHdElNRQfTAwsWExZFTxLxAAAAbUlEQVR4nFXJwQ3AMAhDUdRm'</span>.</div></li>
+<li><div class="src-line"><a name="a158"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'kKojuCswABf2X6UEEiC+WF+PyDfoGEuvwXogq3Rk1Y6W0tBSG8'</span>.</div></li>
+<li><div class="src-line"><a name="a159"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'6Uwpla6CmJnpoYKRsjjb/Y63vo9kIkLcZCCsbGYGwMRqIzEp1R'</span>.</div></li>
+<li><div class="src-line"><a name="a160"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'OBmFk9HQGA2N0ZEIz5HX+h/jailYpfz4dAAAAABJRU5ErkJggg'</span>.</div></li>
+<li><div class="src-line"><a name="a161"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'=='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a162"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a163"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a164"></a><span class="src-comm">//&nbsp;File:&nbsp;diam_blgr.png</span></div></li>
+<li><div class="src-line"><a name="a165"></a><span class="src-comm">//==========================================================</span></div></li>
+<li><div class="src-line"><a name="a166"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">7</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>=&nbsp;<span class="src-num">262&nbsp;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a167"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../default/ImgData_Diamonds.html#var$imgdata">imgdata</a><span class="src-sym">[</span><span class="src-num">7</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>=&nbsp;</div></li>
+<li><div class="src-line"><a name="a168"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'iVBORw0KGgoAAAANSUhEUgAAABsAAAAbBAMAAAB/+ulmAAAAEl'</span>.</div></li>
+<li><div class="src-line"><a name="a169"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BMVEX///+AgIBmzP9m///M//+Z//8hMmBVAAAAAXRSTlMAQObY'</span>.</div></li>
+<li><div class="src-line"><a name="a170"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'ZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAA'</span>.</div></li>
+<li><div class="src-line"><a name="a171"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'AHdElNRQfTAwsWEwCxm6egAAAAbUlEQVR4nFXJwQ3AMAhDUdRm'</span>.</div></li>
+<li><div class="src-line"><a name="a172"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'kKojuCswABf2X6UEEiC+WF+PyDfoGEuvwXogq3Rk1Y6W0tBSG8'</span>.</div></li>
+<li><div class="src-line"><a name="a173"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'6Uwpla6CmJnpoYKRsjjb/Y63vo9kIkLcZCCsbGYGwMRqIzEp1R'</span>.</div></li>
+<li><div class="src-line"><a name="a174"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'OBmFk9HQGA2N0ZEIz5HX+h/jailYpfz4dAAAAABJRU5ErkJggg'</span>.</div></li>
+<li><div class="src-line"><a name="a175"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'=='&nbsp;</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a176"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a177"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a178"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a179"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 25 Apr 2007 00:10:41 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</body>
+</html>

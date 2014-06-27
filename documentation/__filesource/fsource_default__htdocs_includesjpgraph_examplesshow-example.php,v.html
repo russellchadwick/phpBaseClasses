@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for show-example.php,v</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file show-example.php,v</h1>
+<p>Documentation is available at <a href="../default/_htdocs_includes---jpgraph_examples---show-example.php,v.html">show-example.php,v</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php&nbsp;</span><span class="src-var">$target&nbsp;</span>=&nbsp;<a href="http://www.php.net/urldecode">urldecode</a><span class="src-sym">(</span><span class="src-var">$HTTP_GET_VARS</span><span class="src-sym">[</span><span class="src-str">'target'</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;&nbsp;</span><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a2"></a>&lt;!doctype&nbsp;html&nbsp;public&nbsp;&quot;-//W3C//DTD&nbsp;HTML&nbsp;4.0&nbsp;Frameset//EN&quot;&gt;</div></li>
+<li><div class="src-line"><a name="a3"></a>&lt;html&gt;</div></li>
+<li><div class="src-line"><a name="a4"></a>&lt;head&gt;</div></li>
+<li><div class="src-line"><a name="a5"></a>&lt;title&gt;&nbsp;Test&nbsp;suite&nbsp;for&nbsp;JpGraph&nbsp;-&nbsp;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$target</span><span class="src-sym">;&nbsp;</span><span class="src-php">?&gt;</span>&lt;/title&gt;</div></li>
+<li><div class="src-line"><a name="a6"></a>&lt;script&nbsp;type=&quot;text/javascript&quot;&nbsp;language=&quot;javascript&quot;&gt;</div></li>
+<li><div class="src-line"><a name="a7"></a>&lt;!--</div></li>
+<li><div class="src-line"><a name="a8"></a>function&nbsp;resize()</div></li>
+<li><div class="src-line"><a name="a9"></a>{</div></li>
+<li><div class="src-line"><a name="a10"></a>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true;</div></li>
+<li><div class="src-line"><a name="a11"></a>}</div></li>
+<li><div class="src-line"><a name="a12"></a>//--&gt;</div></li>
+<li><div class="src-line"><a name="a13"></a>&lt;/script&gt;</div></li>
+<li><div class="src-line"><a name="a14"></a>&lt;/head&gt;</div></li>
+<li><div class="src-line"><a name="a15"></a>&lt;frameset&nbsp;rows=&quot;*,*&quot;&nbsp;onLoad=&quot;resize()&quot;&gt;</div></li>
+<li><div class="src-line"><a name="a16"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-php">&lt;?php&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a17"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!</span><a href="http://www.php.net/strstr">strstr</a><span class="src-sym">(</span><span class="src-var">$target</span><span class="src-sym">,</span><span class="src-str">&quot;csim&quot;</span><span class="src-sym">)&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">&quot;&lt;frame&nbsp;src=\&quot;show-image.php?target=&quot;</span>.<a href="http://www.php.net/basename">basename</a><span class="src-sym">(</span><span class="src-var">$target</span><span class="src-sym">)</span>.<span class="src-str">&quot;\&quot;&nbsp;name=\&quot;image\&quot;&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a19"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">else</span></div></li>
+<li><div class="src-line"><a name="a20"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;&lt;frame&nbsp;src=\&quot;&quot;</span>.<a href="http://www.php.net/basename">basename</a><span class="src-sym">(</span><span class="src-var">$target</span><span class="src-sym">)</span>.<span class="src-str">&quot;\&quot;&nbsp;name=\&quot;image\&quot;&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a21"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;frame&nbsp;src=&quot;show-source.php?target=<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<a href="http://www.php.net/basename">basename</a><span class="src-sym">(</span><span class="src-var">$target</span><span class="src-sym">)</span><span class="src-sym">;&nbsp;</span><span class="src-php">?&gt;</span>&quot;&nbsp;name=&quot;source&quot;&gt;</div></li>
+<li><div class="src-line"><a name="a23"></a>&lt;/frameset&gt;</div></li>
+<li><div class="src-line"><a name="a24"></a>&lt;/html&gt;</div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 25 Apr 2007 00:14:53 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</body>
+</html>
